@@ -4,14 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acceso a API</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="./css/general.css" rel="stylesheet">
   <link href="./libs/materialize/css/materialize.min.css" rel="stylesheet">
   <script src="./libs/jquery-3.7.1.min.js"></script>
+  <script src="./libs/jquery.filtertable.min.js"></script>
+
   <script src="./libs/materialize/js/materialize.min.js"></script>
+  
   <script type="module" src="./js/carga.js"></script>
 </head>
 <body>
   <main>
     <div class="container">
+
+      <!--
+      <input type="text" class="myInput" onkeyup="searchTable(this.value, 'tblProductos', 0)" placeholder="Search firstnames..." title="Search" id="filtroEstado">
+      -->
+
+      <input type="text" id="filtroEstado">
       <table id="tblProductos" class="centered highlight responsive-table">
         <thead>
           <tr><th>Estado</th><th>Municipio</th><th>Descripción</th><th>Foto</th></tr>
@@ -20,32 +31,35 @@
     
         </tbody>
       </table>
-    </div>
-  </main>
-<script>
-  /*
-  // URL de la API
-  const apiUrl = 'https://smn.conagua.gob.mx/tools/GUI/webservices/index.php?method=1';
 
-  // Realizar solicitud GET utilizando la API Fetch
-  fetch(apiUrl, {mode: 'no-cors'})
-    .then(response => {
-      // Verificar si la solicitud fue exitosa (código 200)
-      if (!response.ok) {
-        throw new Error(`Error de red: ${response.status}`);
-      }
-      // Parsear la respuesta JSON
-      return response.json();
-    })
-    .then(data => {
-      // Hacer algo con los datos de la API
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Error al acceder a la API:', error);
-    });
-    */
-</script>
+    </div>
+    
+
+    
+      
+
+  </main>
+
+  <script>
+    function buscarCoincidencia() {
+    // Obtener el valor del input
+    var textoIntroducido = document.getElementById('Estado').value.toLowerCase(); // Convertir a minúsculas para comparar sin distinción entre mayúsculas y minúsculas
+
+    // Cadena específica a comparar
+    var cadenaEspecifica = 'Oaxaca';
+
+    // Realizar la comparación
+    if (textoIntroducido.includes(cadenaEspecifica.toLowerCase())) {
+      alert('Coincidencia encontrada');
+    } else {
+      // Puedes hacer algo si no hay coincidencia
+    }
+  }
+  </script>
+  <script src="./js/filtros.js"></script>
+  <script src="./js/filtro1.js">
+
+  </script>
 
 </body>
 </html>

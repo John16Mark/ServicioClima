@@ -1,13 +1,15 @@
 import datos from '../json/DailyForecast_MX.json' assert {type: 'json'};
+console.log("Total:"+datos.length);
 $(document).ready(()=>{
-    
     let filas = "";
-
-    for(var i = 0; i < 5 || i<datos.length; i++){
+    var j=0;
+    var comparador ="";
+    for(var i = 0; i<datos.length; i+=1){
         var elemento = datos[i];
-        
-        if(elemento.nes == 'Baja California Sur'){
-            console.log(elemento);
+        if(elemento.nmun != comparador){
+            j++;
+            comparador = elemento.nmun;
+            //console.log(elemento);
             filas += `
             <tr>
                 <td>${elemento.nes}</td>
@@ -17,9 +19,9 @@ $(document).ready(()=>{
             </tr>
             `;
         }
-        
     }
-    //console.log(filas);
+    console.log("Comparados:"+j);
     $("#filasProductos").html(filas);
-    $(".materialboxed").materialbox();
 });
+
+
