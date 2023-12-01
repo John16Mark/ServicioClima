@@ -11,7 +11,7 @@ $(document).ready(()=>{
             comparador = elemento.nmun;
             //console.log(elemento);
             filas += `
-            <tr>
+            <tr id='fila'>
                 <td>${elemento.nes}</td>
                 <td>${elemento.nmun}</td>
                 <td>${elemento.desciel}</td>
@@ -142,7 +142,7 @@ function miFuncion(event) {
 
 function EstadoIgual(palabra){
     for(var i=0; i<datos.length; i++){
-        if(datos[i].nes == palabra){
+        if(palabraIgual(datos[i].nes, palabra)){
             return true;
         }
     }
@@ -154,7 +154,7 @@ function EstadoSimilar(palabra){
         return false;
     }
     for(var i=0; i<datos.length; i++){
-        if(palabraSimilar(datos[i].nes,palabra)){
+        if(palabraSimilar(datos[i].nes, palabra)){
             return true;
         }
     }
