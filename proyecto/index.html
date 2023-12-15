@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f4b09d69fb.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="main_container">
+      
+      <!-- ************************** Barra de navegación ********************* -->
+      <nav class="navbar navbar-expand-lg" style="background-color: rgb(10, 10, 10)">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">
+            <!-- Cambiar el ícono -->
+            <img src="icons/Despejado.png" width="30" height="30">
+            Clima
+          </a>
+          <button class="navbar-toggler shadow-none border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" style="background-color: rgb(10, 10, 10)" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" style="background-color: rgb(10, 10, 10)">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Link</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- ************************** ********************* ********************* -->     
+
+    <div class="container">
+      <div class="card informacion_general" style="border: 0px; border-radius: 30px;">
+        <div class="card-body">
+          <!--**Primera sección con información general-->
+          <div class="row" style="width: auto; justify-content: center; margin-bottom: 20px;">
+
+            <div class="col-md-4" style="display: flex;">
+              <div class="col">
+                <img src="./icons/Despejado.png" width="50" height="50">
+                <span>Soleado</span>
+              </div>
+              <div class="col"> 
+                <h1>16°</h1>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <h1 style="color: #fff; font-size: 4em;">Cadereyta de Montes</h1>
+              </div>
+              <div class="row">
+                <h1 style="color: #fff;">Querétaro</h1>
+              </div>
+            </div>
+
+          </div>
+
+          <!--**Segunda sección con información tanto del clima como de los sig 3 dias-->
+          <div class="row" style="width: auto; justify-content: center;">
+
+            <!--PRIMERA SECCION-->
+            <div class="col-md-4 col-sm-4" >
+              <div class="card">
+                <div class="card-body">
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
+                    <div class="col">
+                      <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
+                        <img src="icons/rain.png" width="20" height="20">
+                      </div>
+                      <p class="fs-6">Medio nublado</p>
+                    </div>
+                    <div class="col">
+                      <img src="images/vecteezy_people-walking-with-umbrellas-weather-with-rainy-landscapes_7905085.jpg" width="150" height="110">
+                      
+                    </div>
+                  </div>
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; border-top: 10px;">
+                    <div class="col"> <!-- Temperatura máxima -->
+                      <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
+                        <img src="icons/tmax.png" width="28" height="28">
+                      </div>
+                      <p class="fs-6" style="margin-bottom: 0px;">Temperatura máxima</p>
+                      <p class="fs-6">18°</p>
+                    </div>
+                    <div class="col"> <!-- Temperatura mínima -->
+                      <img src="icons/tmin.png" width="28" height="28">
+                      <p class="fs-6" style="margin-bottom: 0px;">Temperatura mínima</p>
+                      <p class="fs-6">2°</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--TERMINA PRIMERA SECCION-->
+
+            <!--SEGUNDA SECCION-->
+            <div class="col-md-8 col-sm-4" >
+              <div class="card">
+                <div class="card-body">
+                  <div class="row" style="width: auto;">
+                    <div class="col-md-4">
+                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                        <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                            <div class="imagen-container" style="background-position: center center;"></div>
+                            <p class="fs-6">Lluvioso</p>
+                            <p class="fs-6">máx 40°/ mín 18°</p>
+                            <p class="fs-6">Humedad: 80%</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                        <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                          <div class="imagen-container" style="background-position: center center;"></div>
+                          <p class="fs-6">Despejado</p>
+                          <p class="fs-6">40°/18°</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                        <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                          <div class="imagen">
+                            <img src="icons/parcialmente-nublado-lluvia.png" width="50px" height="50px">
+                          </div>
+                            <p class="fs-6">Despejado</p>
+                            <p class="fs-6">40°/18°</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--TERMINA SEGUNDA SECCION-->
+          </div>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+
+</body>
+</html>
