@@ -1,0 +1,40 @@
+.main_container{
+    /* chat */
+    /*background-image: url("../img/morning.jpg");
+    height: 100%;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*color: #fff;
+    /*position: relative;
+    /*transition: 500ms;
+    /*opacity: 1; /* cambiar a 0*/
+        position: relative;
+        z-index: 2;
+        width: 60%;
+        margin: 50px auto;
+        padding: 20px;
+        background: transparent;
+        -moz-box-shadow: 0 0 20px black;
+        -webkit-box-shadow: 0 0 20px black;
+        box-shadow: 0 0 20px black;
+}
+
+.bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+  }
+  .bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }

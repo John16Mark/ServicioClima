@@ -19,6 +19,7 @@ h1, h2, h3, span{
 .main_container{
     /* chat */
     background-image: url("images/back.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
