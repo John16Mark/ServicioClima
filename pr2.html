@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contenido con Transición</title>
+    <style>
+        .contenido {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .oculto {
+            opacity: 0;
+        }
+
+        .oculto2 {
+            display: none;
+        }
+
+        .mostrar {
+            display: initial;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="contenido1" class="contenido">
+        <h1>Contenido 1</h1>
+        <p>Este es el contenido original.</p>
+        <button onclick="cambiarContenido()">Mostrar Contenido 2</button>
+    </div>
+
+    <div id="contenido2" class="oculto contenido">
+        <h1>Contenido 2</h1>
+        <p>Este es el nuevo contenido.</p>
+        <button onclick="regresar()">Regresar a Contenido 1</button>
+    </div>
+
+    <script>
+        function cambiarContenido() {
+            var contenido1 = document.getElementById("contenido1");
+            var c2 = document.getElementById("contenido2");
+            contenido1.classList.add("oculto");
+
+            contenido1.addEventListener("transitionend", function() {
+                contenido1.classList.add("oculto2");
+                c2.classList.remove("oculto");
+                c2.classList.remove("oculto2");
+            }, { once: true });
+        }
+
+        function regresar() {
+            var contenido2 = document.getElementById("contenido2");
+            contenido2.classList.add("oculto");
+
+            contenido2.addEventListener("transitionend", function() {
+                contenido2.classList.add("oculto2");
+                document.getElementById("contenido1").classList.remove("oculto");
+                document.getElementById("contenido1").classList.remove("oculto2");
+            }, { once: true });
+        }
+    </script>
+
+</body>
+</html>
