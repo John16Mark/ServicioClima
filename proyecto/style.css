@@ -6,22 +6,27 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Afacad', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-h1, h3, span, img{
+h1, h2, h3, span{
+    z-index: 1;
+}
+
+.col h1{
     z-index: +1;
 }
-
 .main_container{
     /* chat */
-    height: 100vh;
+    background-image: url("images/back.jpg");
     background-position: center;
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     position: relative;
     transition: 500ms;
     opacity: 1; /* cambiar a 0*/
+    
 }
 /*
 .main_container::before{
@@ -35,15 +40,14 @@ h1, h3, span, img{
     z-index: 0;
 }*/
 
-/* ----------- Encabezado ----------------------------- */
-/*
+
     @media(max-width: 991px)
 {
    .sidebar{
     background-color: rgba(255, 255, 255, 0.15);
     } 
 }
-*/
+
 
 /* ----------- Empieza contenido ------------------------- */
 /*
@@ -131,9 +135,32 @@ h1, h3, span, img{
     border-radius: 30px;
 }
 
-
-
 /* **Ends first section with general information */
+
+.cuadros-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont1-img{
+    width: fit-content;
+    height: 24px;
+    justify-content: center;
+}
+
+.clima h1, .estado-municipio h2, h3{
+    font-family: 'Afacad', sans-serif;
+}
+
+.card.cont{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    backdrop-filter: blur(2rem);
+    background-color: rgba(255, 255, 255, 0.249);
+    color: #fff;
+}
+
 /*
 .content > div {
     display: flex;
@@ -211,6 +238,7 @@ h1, h3, span, img{
 .card.hoverable:hover .imagen-container{
     background-image: url("icons/parcialmente-nublado-lluvia.gif");
 }
+
 /*
 .panel{
     position: relative;

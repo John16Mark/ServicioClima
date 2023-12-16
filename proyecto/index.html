@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/f4b09d69fb.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap');
+    </style>
 </head>
 <body>
     <div class="main_container">
@@ -42,40 +45,75 @@
         </div>
       </nav>
       <!-- ************************** ********************* ********************* -->     
-
+      <!--
+        <div class="content">
+          <div class="informacion_general">
+            <div class="clima">
+              <div class="temp_info">
+                <img
+                src="./icons/Despejado.png"
+                class="icon"
+                alt="icon"
+                width="50"
+                height="50"
+                />
+                <span class="condition">Soleado</span>
+              </div>
+              <div class="temperatura">
+                <h1 class="temp">16&#176;</h1>
+              </div>
+            </div>
+            nombre del municipio y estado 
+            <div class="city_time">
+              <h1 class="nombre">Cadereyta de Montes</h1>
+              <h1>Queretaro</h1>
+              <small>
+                <span class="tiempo">06:09</span>
+                <span class="fecha">
+                  Lunes Sep 19
+                </span>
+              </small>
+            </div>
+          </div>
+        </div>
+      -->
+        
     <div class="container">
       <div class="card informacion_general" style="border: 0px; border-radius: 30px;">
         <div class="card-body">
+
           <!--**Primera sección con información general-->
-          <div class="row" style="width: auto; justify-content: center; margin-bottom: 20px;">
 
-            <div class="col-md-4" style="display: flex;">
-              <div class="col">
-                <img src="./icons/Despejado.png" width="50" height="50">
-                <span>Soleado</span>
-              </div>
-              <div class="col"> 
-                <h1>16°</h1>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="row">
-                <h1 style="color: #fff; font-size: 4em;">Cadereyta de Montes</h1>
-              </div>
-              <div class="row">
-                <h1 style="color: #fff;">Querétaro</h1>
-              </div>
-            </div>
+              <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 60px; display: flex;">
 
-          </div>
+                <div class="col-md-3 clima" style="justify-content: center;">
+                  <div class="clima-img" style="z-index: 1;">
+                    <img src="icons/Despejado.png"  style="width: fit-content; height: max-content; justify-content: center; align-items: center;">
+                  </div>
+                  <h1 style="color: #fff; font-size: 6em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">22°</h1>
+                </div>
+  
+                <div class="col-md-7 align-self-center estado-municipio" style="align-items: center;">
+                  <div class="row">
+                    <h2 style=" color: #fff; font-size: 3em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Cadereyta de Montes</h2>
+                  </div>
+                  <div class="row">
+                    <h3 style="color: #fff; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Querétaro</h3>
+                  </div>
+                </div>
+  
+              </div>
+
+          
 
           <!--**Segunda sección con información tanto del clima como de los sig 3 dias-->
           <div class="row" style="width: auto; justify-content: center;">
 
             <!--PRIMERA SECCION-->
-            <div class="col-md-4 col-sm-4" >
-              <div class="card">
+            <div class="col-md-4 col-sm-4" style="margin-bottom: 30px;">
+              <div class="card cont">
                 <div class="card-body">
+
                   <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
                     <div class="col">
                       <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
@@ -84,24 +122,60 @@
                       <p class="fs-6">Medio nublado</p>
                     </div>
                     <div class="col">
-                      <img src="images/vecteezy_people-walking-with-umbrellas-weather-with-rainy-landscapes_7905085.jpg" width="150" height="110">
-                      
-                    </div>
-                  </div>
-                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; border-top: 10px;">
-                    <div class="col"> <!-- Temperatura máxima -->
-                      <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
-                        <img src="icons/tmax.png" width="28" height="28">
+                      <div>
+                        <img src="images/lluviagente.png" width="auto" height="120px" style="position: absolute; z-index: 2; top: -1em; right: 0.9em;">
                       </div>
-                      <p class="fs-6" style="margin-bottom: 0px;">Temperatura máxima</p>
-                      <p class="fs-6">18°</p>
-                    </div>
-                    <div class="col"> <!-- Temperatura mínima -->
-                      <img src="icons/tmin.png" width="28" height="28">
-                      <p class="fs-6" style="margin-bottom: 0px;">Temperatura mínima</p>
-                      <p class="fs-6">2°</p>
                     </div>
                   </div>
+
+                  <!--Temperatura máxima y mínima-->
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                    <div class="col">
+                      <div class="texto" style="margin-top: 10px;">
+                        <span>Máxima</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/maxima.png">
+                        <h3 style="margin-left: 8px;">40</h3>
+                        <h3 style="margin-left: 1px;">°</h3>
+                      </div>  
+                    </div>
+                    <div class="col" style="margin-top: 10px;">
+                      <div class="texto">
+                        <span>Mínima</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/minima.png">
+                        <h3 style="margin-left: 8px;">10</h3>
+                        <h3 style="margin-left: 1px;">°</h3>
+                      </div>  
+                    </div>
+                  </div>
+
+                  <!--Humedad y Viento-->  
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                    <div class="col">
+                      <div class="texto" style="margin-top: 10px;">
+                        <span>Humedad</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/humedad.png">
+                        <h3 style="margin-left: 8px;">80</h3>
+                        <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
+                      </div>  
+                    </div>
+                    <div class="col" style="margin-top: 10px;">
+                      <div class="texto">
+                        <span>Viento</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/viento.png">
+                        <h3 style="margin-left: 8px;">10</h3>
+                        <h3 style="margin-left: 1px; font-size: 13px;">km/h</h3>
+                      </div>  
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -109,8 +183,9 @@
 
             <!--SEGUNDA SECCION-->
             <div class="col-md-8 col-sm-4" >
-              <div class="card">
+              <div class="card cont">
                 <div class="card-body">
+
                   <div class="row" style="width: auto;">
                     <div class="col-md-4">
                       <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
@@ -143,6 +218,7 @@
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -150,7 +226,129 @@
           </div>
         </div>
       </div>
-        
+        <!--Cambiar esta wea hoorible que no me gusta alv-->
+        <div class="row" style="margin-left: 20px; margin-right: 20px; width:auto; justify-content: center;">
+
+          <!--*************************Información general-->
+          <div class="col-md-4 col-sm-4" >
+            <div class="card" style="border-radius: 20px 50px 20px 20px;">
+              <div class="card-body">
+
+                <div class="row" style="width: auto; justify-content: center;">
+                  <div class="col" style="width: 50%;">
+                      <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 15px;">
+                        <div class="img">
+                          <img class="cont1-img" src="icons/rain.png">
+                        </div>
+                        <div class="texto">
+                          <span>Medio nublado</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                  
+                <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                  <div class="col">
+                    <div class="texto" style="margin-top: 10px;">
+                      <span>Máxima</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/maxima.png">
+                      <h3 style="margin-left: 8px;">40</h3>
+                      <h3 style="margin-left: 1px;">°</h3>
+                    </div>  
+                  </div>
+                  <div class="col" style="margin-top: 10px;">
+                    <div class="texto">
+                      <span>Mínima</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/minima.png">
+                      <h3 style="margin-left: 8px;">10</h3>
+                      <h3 style="margin-left: 1px;">°</h3>
+                    </div>  
+                  </div>
+                </div>
+
+                <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                  <div class="col">
+                    <div class="texto" style="margin-top: 10px;">
+                      <span>Humedad</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/humedad.png">
+                      <h3 style="margin-left: 8px;">80</h3>
+                      <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
+                    </div>  
+                  </div>
+                  <div class="col" style="margin-top: 10px;">
+                    <div class="texto">
+                      <span>Viento</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/viento.png">
+                      <h3 style="margin-left: 8px;">10</h3>
+                      <h3 style="margin-left: 1px; font-size: 13px;">km/h</h3>
+                    </div>  
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!--*************************Información 3 dias siguientes-->
+          <div class="col-md-8 col-sm-4" >
+            <div class="card">
+              <div class="card-body">
+                <div class="row" style="width: auto;">
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                          <div class="imagen-container" style="background-position: center center;"></div>
+                          <p class="fs-6">Lluvioso</p>
+                          <p class="fs-6">máx 40°/ mín 18°</p>
+                          <p class="fs-6">Humedad: 80%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="imagen-container" style="background-position: center center;"></div>
+                        <p class="fs-6">Despejado</p>
+                        <p class="fs-6">40°/18°</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="imagen">
+                          <img src="icons/parcialmente-nublado-lluvia.png" width="50px" height="50px">
+                        </div>
+                          <p class="fs-6">Despejado</p>
+                          <p class="fs-6">40°/18°</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="imagen">
+                          <img src="icons/parcialmente-nublado-lluvia.png" width="50px" height="50px">
+                        </div>
+                          <p class="fs-6">Despejado</p>
+                          <p class="fs-6">40°/18°</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!--Final row-->
       </div>
     </div>
 
