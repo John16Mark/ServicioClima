@@ -1,0 +1,16 @@
+.contenido {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.oculto {
+    opacity: 0;
+}
+
+.oculto2 {
+    display: none;
+}
+
+.mostrar {
+    display: initial;
+}

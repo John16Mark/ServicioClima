@@ -22,7 +22,7 @@
       <input type="text" class="myInput" onkeyup="searchTable(this.value, 'tblProductos', 0)" placeholder="Search firstnames..." title="Search" id="filtroEstado">
       -->
 
-      <input type="text" id="filtro">
+      <input type="text" id="filtro" class="contenido">
       <table id="tablaClima" class="centered highlight responsive-table">
         <thead>
           <tr><th>Estado</th><th>Municipio</th><th>Descripción</th><th>Foto</th></tr>
@@ -40,22 +40,7 @@
 
   </main>
 
-  <script>
-    function buscarCoincidencia() {
-    // Obtener el valor del input
-    var textoIntroducido = document.getElementById('Estado').value.toLowerCase(); // Convertir a minúsculas para comparar sin distinción entre mayúsculas y minúsculas
 
-    // Cadena específica a comparar
-    var cadenaEspecifica = 'Oaxaca';
-
-    // Realizar la comparación
-    if (textoIntroducido.includes(cadenaEspecifica.toLowerCase())) {
-      alert('Coincidencia encontrada');
-    } else {
-      // Puedes hacer algo si no hay coincidencia
-    }
-  }
-  </script>
   <!--
     <script src="./js/filtros.js"></script>
   -->

@@ -2,18 +2,22 @@ import datos from '../json/DailyForecast_MX.json' assert {type: 'json'};
 console.log("Total:"+datos.length);
 
 var tabla = document.getElementById("tablaClima");
-// Crea la tabla a partir del json
+var fechaMenor;
+var datosUnicos = [];
+
 $(document).ready(()=>{
     let filasHtml = "";
-    var comparador = "";
-    var datosUnicos = [];
+    
+    // Encontrar la fecha menor
+    fechaMenor = encontrarFechaMenor();
+    console.log("Fecha Menor: ", fechaMenor);
 
-
-
+    // Si el dato tiene la fecha menor dentro del json:
     for(var i = 0; i<datos.length; i+=1){
         var elemento = datos[i];
-        if(elemento.nmun != comparador){
-            comparador = elemento.nmun;
+        var fechaAux = new Date(fechaFormato(datos[i].dloc));
+        if(fechaAux.getTime() == fechaMenor.getTime()){
+            datosUnicos.push(elemento);
             filasHtml += `
             <tr id='fila'>
                 <td>${elemento.nes}</td>
@@ -26,51 +30,72 @@ $(document).ready(()=>{
     }
     $("#filasProductos").html(filasHtml);
 
-    var arr = [];
-    for(var i=0; i<4; i++){
-        arr.push(datos[i]);
-    }
-
-    console.log(verLocalidadUnica(arr));
+    console.log("Número de localidades: ", datosUnicos.length);
 
     // Hacer las filas clickables
     var filas = tabla.getElementsByTagName("tr");
-    console.log(filas);
-    for (var i = 0; i < filas.length; i++) {
+    for (var i = 1; i < filas.length; i++) {
         filas[i].addEventListener("click", function() {
-            // Obtener la información de la fila seleccionada
             var celdas = this.getElementsByTagName("td");
-            var rowData = {
-                id: celdas[0].innerText,
-                nombre: celdas[1].innerText,
-                apellido: celdas[2].innerText
-            };
+            if(celdas){
 
-            // Hacer algo con la información, por ejemplo, mostrarla en la consola
-            console.log(rowData);
+                // Recolecta la información de los cuatro días de la fila seleccionada
+                var datosLocalidad = [];
+                for(var j=0; j<datos.length; j++){
+                    if(celdas[0].innerText == datos[j].nes && celdas[1].innerText == datos[j].nmun){
+                        datosLocalidad.push(datos[j]);
+                    }
+                }
+                console.log(datosLocalidad);
+
+                var rowData = {
+                    id: celdas[0].innerText,
+                    nombre: celdas[1].innerText,
+                    apellido: celdas[2].innerText
+                };
+                console.log(rowData);
+
+                /*
+                var contenido1 = document.getElementById("contenido1");
+                var c2 = document.getElementById("contenido2");
+                contenido1.classList.add("oculto");
+
+                contenido1.addEventListener("transitionend", function() {
+                    contenido1.classList.add("oculto2");
+                    c2.classList.remove("oculto");
+                    c2.classList.remove("oculto2");
+                }, { once: true });
+                */
+            }
+            
         });
     }
 });
 
-function verLocalidadUnica(array){
-    if(array.length !== 4){
-        return false;
-    }
-    for(var i=0; i<4; i++){
-        if((array[i].nes != array[0].nes) || (array[i].nmun != array[0].nmun)){
-            return false;
-        }
-    }
-    return true;
-}
-
 /*************************************************************************************************
  *                                      LOCALIDADES ÚNICAS
 *************************************************************************************************/
-function as() {
-
+// Recibe una cadena como viene en el json y la transforma a fecha de js
+function fechaFormato(fechaStr) {
+    var anio = parseInt(fechaStr.substring(0, 4));
+    var mes = parseInt(fechaStr.substring(4,6))-1;
+    var dia = parseInt(fechaStr.substring(6,8));
+    var fechaObj = new Date(anio, mes, dia);
+    return fechaObj;
 }
 
+// Regresa la fecha menor de todo el json
+function encontrarFechaMenor(){
+    var fecha = new Date(fechaFormato(datos[0].dloc));
+    for(var i = 1; i<datos.length; i+=1){
+        var elemento = datos[i];
+        var fechaAux = new Date(fechaFormato(datos[1].dloc));
+        if(fechaAux.getTime() < fecha.getTime){
+            fecha = fechaAux;
+        }
+    }
+    return fecha;
+}
 
 /*************************************************************************************************
  *                                   FILTRADO DE LOCALIDADES
@@ -127,8 +152,8 @@ function SimilarEstado(palabra){
     if(palabra == ""){
         return false;
     }
-    for(var i=0; i<datos.length; i++){
-        if(palabraSimilar(datos[i].nes, palabra)){
+    for(var i=0; i<datosUnicos.length; i++){
+        if(palabraSimilar(datosUnicos[i].nes, palabra)){
             return true;
         }
     }
@@ -140,8 +165,8 @@ function SimilarMunicipio(palabra){
     if(palabra == ""){
         return false;
     }
-    for(var i=0; i<datos.length; i++){
-        if(palabraSimilar(datos[i].nmun, palabra)){
+    for(var i=0; i<datosUnicos.length; i++){
+        if(palabraSimilar(datosUnicos[i].nmun, palabra)){
             return true;
         }
     }
