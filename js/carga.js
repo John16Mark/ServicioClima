@@ -23,12 +23,12 @@ $(document).ready(()=>{
                 <td>${elemento.nes}</td>
                 <td>${elemento.nmun}</td>
                 <td>${elemento.desciel}</td>
-                <td><img src='./img/${elemento.desciel}.png' class='materialboxed cambiaTamImg'></td>
+                <td><img src='./img/${elemento.desciel}.png' class='cambiaTamImg'></td>
             </tr>
             `;
         }
     }
-    $("#filasProductos").html(filasHtml);
+    $("#filasTabla").html(filasHtml);
 
     console.log("Número de localidades: ", datosUnicos.length);
 
@@ -47,13 +47,21 @@ $(document).ready(()=>{
                     }
                 }
                 console.log(datosLocalidad);
-
+                /*
                 var rowData = {
                     id: celdas[0].innerText,
                     nombre: celdas[1].innerText,
                     apellido: celdas[2].innerText
                 };
                 console.log(rowData);
+                */
+
+                var c1 = document.getElementById("contenido1");
+                c1.classList.add("oculto");
+
+                c1.addEventListener("transitionend", function() {
+                    c1.classList.add("oculto2");
+                }, { once: true });
 
                 /*
                 var contenido1 = document.getElementById("contenido1");

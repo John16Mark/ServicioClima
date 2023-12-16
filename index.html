@@ -6,6 +6,7 @@
   <title>Acceso a API</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="./css/general.css" rel="stylesheet">
+  <link href="./css/visibilidad.css" rel="stylesheet">
   <link href="./libs/materialize/css/materialize.min.css" rel="stylesheet">
   <script src="./libs/jquery-3.7.1.min.js"></script>
   <script src="./libs/jquery.filtertable.min.js"></script>
@@ -16,33 +17,19 @@
 </head>
 <body>
   <main>
-    <div class="container">
+    <div id="contenido1" class="container contenido">
 
-      <!--
-      <input type="text" class="myInput" onkeyup="searchTable(this.value, 'tblProductos', 0)" placeholder="Search firstnames..." title="Search" id="filtroEstado">
-      -->
-
-      <input type="text" id="filtro" class="contenido">
+      <input type="text" id="filtro">
       <table id="tablaClima" class="centered highlight responsive-table">
         <thead>
           <tr><th>Estado</th><th>Municipio</th><th>Descripción</th><th>Foto</th></tr>
         </thead>
-        <tbody id="filasProductos">
+        <tbody id="filasTabla">
     
         </tbody>
       </table>
 
     </div>
-    
-
-    
-      
-
   </main>
-
-
-  <!--
-    <script src="./js/filtros.js"></script>
-  -->
 </body>
 </html>
