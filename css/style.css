@@ -1,24 +1,17 @@
-.main_container{
-    /* chat */
-    /*background-image: url("../img/morning.jpg");
-    height: 100%;
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*color: #fff;
-    /*position: relative;
-    /*transition: 500ms;
-    /*opacity: 1; /* cambiar a 0*/
-        position: relative;
-        z-index: 2;
-        width: 60%;
-        margin: 50px auto;
-        padding: 20px;
-        background: transparent;
-        -moz-box-shadow: 0 0 20px black;
-        -webkit-box-shadow: 0 0 20px black;
-        box-shadow: 0 0 20px black;
+.container{
+    position: relative;
+    z-index: 2;
+}
+
+.divTabla{
+    width: 75%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    backdrop-filter: blur(2rem);
+    background-color: rgba(255, 255, 255, 0.249);
+    
 }
 
 .bg {
@@ -28,7 +21,8 @@
     width: 200%; 
     height: 200%;
   }
-  .bg img {
+  
+.bg img {
     position: absolute; 
     top: 0; 
     left: 0; 
