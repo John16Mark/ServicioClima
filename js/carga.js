@@ -6,9 +6,6 @@ var fechaMenor;
 var datosUnicos = [];
 
 $(document).ready(()=>{
-    
-    
-    
     let filasHtml = "";
     
     // Encontrar la fecha menor
@@ -21,6 +18,7 @@ $(document).ready(()=>{
         var fechaAux = new Date(fechaFormato(datos[i].dloc));
         if(fechaAux.getTime() == fechaMenor.getTime()){
             datosUnicos.push(elemento);
+            //regresarIcono(elemento.desciel, elemento.prec);
             filasHtml += `
             <tr id='fila'>
                 <td scope='row' data-label='Estado'>${elemento.nes}</td>
@@ -28,8 +26,8 @@ $(document).ready(()=>{
                 <td scope='row' data-label='Temp. Mín.'>${elemento.tmin} °C</td>
                 <td scope='row' data-label='Temp. Máx.'>${elemento.tmax} °C</td>
                 <td scope='row' data-label='Desc. Cielo'>${elemento.desciel}</td>
-                <td scope='row' data-label='Humedad'>${elemento.probprec}%</td>
-                <td><img src='./img/${elemento.desciel}.png' class='cambiaTamImg'></td>
+                <td scope='row' data-label='Precipitación'>${elemento.prec} l/m2</td>
+                <td><img src='./${regresarIcono(elemento.desciel, elemento.prec)}.png' class='cambiaTamImg' style='width: 48px; height: fit-content;'></td>
             </tr>
             `;
         }
@@ -54,15 +52,37 @@ $(document).ready(()=>{
                 }
                 console.log(datosLocalidad);
 
+                // Muestra la información
                 var c1 = document.getElementById("contenido1");
                 var c2 = document.getElementById("contenido2");
                 c1.classList.add("oculto");
+                c1.classList.remove("mostrar")
                 
                 c1.addEventListener("transitionend", function() {
                     c1.classList.add("oculto2");
                     c2.classList.remove("oculto");
-                    c2.classList.remove("oculto2");
+                    
+                    c2.classList.add("mostrar");
                 }, { once: true });
+                c2.classList.remove("oculto2");
+                // Cambia los textos:
+                var txtMun = document.getElementById("txtMunicipio");
+                var txtEs = document.getElementById("txtEstado");
+                txtMun.innerText = datosLocalidad[0].nmun;
+                txtEs.innerText = datosLocalidad[0].nes;
+                var txtDia1Max = document.getElementById("dia1max");
+                var txtDia1Min = document.getElementById("dia1min");
+                txtDia1Max.innerText = datosLocalidad[0].tmax;
+                txtDia1Min.innerText = datosLocalidad[0].tmin;
+                var txtDia1Humedad = document.getElementById("dia1wet");
+                var txtDia1Viento = document.getElementById("dia1wind");
+                txtDia1Humedad.innerText = datosLocalidad[0].probprec;
+                txtDia1Viento.innerText = datosLocalidad[0].velvien;
+
+                var txtDia2Temp = document.getElementById("dia2temp");
+                var txtDia2Hum = document.getElementById("dia2wet");
+                txtDia2Temp.innerText = "máx "+datosLocalidad[1].tmax+"°/ mín "+datosLocalidad[1].tmin+"°"
+                txtDia2Hum.innerText = "Humedad: "+datosLocalidad[1].probprec+"%"
             }
             
         });
@@ -243,6 +263,61 @@ function palabraIgual(palabra1, palabra2){
     }
     return false;
 }
+
+/*************************************************************************************************
+ *                              FUNCIONES PARA ÍCONOS E IMÁGENES
+*************************************************************************************************/
+function regresarIcono(nubes, humedad){
+    var cadena="icons/weather/";
+    if(nubes == "Despejado") {
+        return cadena+"dia-despejado";
+    }
+    else if(nubes == "Poco nuboso") {
+        if(humedad < 2.0) {
+            return cadena+"poco-nuboso";
+        } else {
+            return cadena+"parcialmente-nublado-lluvia";
+        }
+    }
+    else if(nubes == "Medio nublado") {
+        if(humedad < 2.0) {
+            return cadena+"medio-nublado";
+        } else if(humedad < 10.0) {
+            return cadena+"nublado-pocalluvia";
+        } else if(humedad < 20.0) {
+            return cadena+"nublado-lluviamedia";
+        } else {
+            return cadena+"nublado-lluviaintensa";
+        }
+    }
+    else if(nubes == "Cielo nublado") {
+        if(humedad < 1.5) {
+            return cadena+"medio-nublado";
+        } else if(humedad < 10.0) {
+            return cadena+"nublado-pocalluvia";
+        } else if(humedad < 20.0) {
+            return cadena+"nublado-lluviamedia";
+        } else {
+            return cadena+"nublado-lluviaintensa";
+        }
+    } else if(nubes == "Cielo cubierto") {
+        if(humedad < 1.5) {
+            return cadena+"nublado";
+        } else if(humedad < 10.0) {
+            return cadena+"nublado-pocalluvia";
+        } else if(humedad < 20.0) {
+            return cadena+"nublado-lluviamedia";
+        } else {
+            return cadena+"nublado-lluviaintensa";
+        }
+    }
+    return cadena;
+}
+
+/*************************************************************************************************
+ *                                  SCROLL BACK TO TOP
+*************************************************************************************************/
+
 $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
         $('#back-to-top').fadeIn();

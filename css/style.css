@@ -38,7 +38,7 @@ header {
                     CONTENEDORES
 ********************************************************/
 
-.container{
+.cc{
   all: initial;
   position: relative;
   z-index: 2;
@@ -373,8 +373,149 @@ tbody tr:hover {
     min-width: 50%;
     min-height: 50%;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  z-index: 6;
+}
 
 /********************************************************
-                    Barra de filtro
+                    SEGUNDO CONTENIDO
 ********************************************************/
+
+h1, h2, h3, span{
+  z-index: 1;
+}
+
+.texto {
+  font-family: 'Afacad', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ----------- Empieza contenido ------------------------- */
+
+
+/* **First section with general information */
+.informacion_general{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-image: url("/img/prueba.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 500ms;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 10px 10px 0
+              rgba(0, 0, 0, 0.6);
+}
+
+.informacion_general::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+
+.cont1-img{
+  width: fit-content;
+  height: 24px;
+  justify-content: center;
+}
+
+.clima h1, .estado-municipio h2, h3{
+  font-family: 'Afacad', sans-serif;
+}
+
+.clima{
+  display: flex;
+  align-items: center;
+}
+
+/* **Ends first section with general information */
+
+.cuadros-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.cont{
+  border-radius: 20px;
+  border: 1px solid transparent;
+  backdrop-filter: blur(2rem);
+  background-color: rgba(255, 255, 255, 0.249);
+  color: #fff;
+}
+
+.cont-img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+  top: -30px;
+  display: block;
+  left: 50%;
+  transform: translatex(-50%);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  border: 2px;
+  border-color: black;
+}
+
+
+.row{
+  width: 100%;
+  margin-right: 30px;
+}
+
+.card.hoverable{
+  transition: all 0.3s;
+  border-radius: 15px;
+  backdrop-filter: blur(2rem);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card.hoverable:hover{
+  transform: scale(1.05);
+}
+
+.imagen-container{
+  background-image: url("/icons/weather/parcialmente-nublado-lluvia.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.3s;
+}
+
+.card.hoverable:hover .imagen-container{
+  background-image: url("/icons/weather/parcialmente-nublado-lluvia.gif");
+}
+
+ul li a{
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+ul li a:before{
+  content: '';
+  position: absolute;
+  background: #000;
+  width: auto;
+  height: 3px;
+}
 
