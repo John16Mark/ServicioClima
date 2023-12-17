@@ -78,7 +78,7 @@ header {
 @media screen and (max-width: 1000px) {
   #divTituloTexto{
     width: 100%;
-    margin-left: 0%;
+    margin-left: 5%;
     padding-left: 10px;
     font-size: 4em;
   }
@@ -246,6 +246,19 @@ th{
   height: 68px;
 }
 
+.celdaTemp {
+  text-align: right;
+}
+
+.celdaImg {
+  text-align: center;
+}
+
+table td img {
+  width: 48px;
+  height: fit-content;
+}
+
 tbody tr:hover {
   color: var(--Acento);
   background-color: var(--backgroundLight);
@@ -266,11 +279,12 @@ tbody tr:hover {
     font-size: .8em;
   }
   #colHum {
-    font-size: .75em;
+    font-size: .9em;
     content: "Hum.";
   }
   table td img {
-    width: 45px;
+    width: 40px;
+    height: fit-content;
   }
 
 
@@ -290,7 +304,14 @@ tbody tr:hover {
   #fila{
     font-size: .7em;
   }
+  table td img {
+    width: 25px;
+    height: fit-content;
+  }
 }
+/*
+cambio drástico en la presentación de la tabla
+*/
 @media screen and (max-width: 650px) {
   table {
     border: 1;
@@ -332,6 +353,7 @@ tbody tr:hover {
 
   table td img {
     width: 2px;
+    height: 2px;
   }
   
   

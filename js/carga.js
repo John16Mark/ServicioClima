@@ -27,7 +27,7 @@ $(document).ready(()=>{
                 <td scope='row' data-label='Temp. Máx.'>${elemento.tmax} °C</td>
                 <td scope='row' data-label='Desc. Cielo'>${elemento.desciel}</td>
                 <td scope='row' data-label='Precipitación'>${elemento.prec} l/m2</td>
-                <td><img src='./${regresarIcono(elemento.desciel, elemento.prec)}.png' class='cambiaTamImg' style='width: 48px; height: fit-content;'></td>
+                <td class='celdaImg' ><img src='./${regresarIcono(elemento.desciel, elemento.prec)}.png' class='cambiaTamImg'></td>
             </tr>
             `;
         }
