@@ -9,23 +9,57 @@
   --foregroundPrimary: rgb(10, 100, 151);
   --foregroundSecondary: rgb(245, 244, 244);
   --Acento: rgb(67, 154, 226); 
+
+  --C1: #1D5F9B;
+  --C2: #75C2F6;
+  --C5: #c3e6f8;
+  --C3: #F4D160;
+  --C4: #FBEEAC;
 }
 
 *{
   margin: 0px;
   padding: 0px;
 }
-.container{
-  position: relative;
-  z-index: 2;
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
 }
 
-#contenido1 {
+
+header {
+  display: block;
+}
+
+/********************************************************
+                    CONTENEDORES
+********************************************************/
+
+.container{
+  all: initial;
+  position: relative;
+  z-index: 2;
+  margin: 0px;
   width: 100%;
 }
 
+
+#contenido1 {
+  margin: 0px;
+  width: 100%;
+  
+}
+
 #divTitulo{
-  background-color: var(--backgroundDark);
+  width: 100%;
+  clear: both;
+  top: 0px;
+  background-color: var(--C1);
+  box-sizing: initial;
+  margin-top: 0px;
 }
 
 #divTituloTexto{
@@ -37,7 +71,8 @@
   text-align: left;
   font-family: 'afacad', sans-serif;
   font-size: 6em;
-  text-shadow: 2px 2px rgba(255,255,255,0.8);
+  color: white;
+  text-shadow: 4px 4px rgba(0,0,0,0.8);
 }
 
 @media screen and (max-width: 1000px) {
@@ -77,15 +112,18 @@
   top:15px;
   left: 0;
   width: 200px;
-  height: 30px;
-  color: #666;
-  font-weight: bold;
+  height: 25px;
+  color: whitesmoke;
   line-height: 30px;
+  font-family: 'montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 330;
 }
 
 .inputbox .inputbox-content{
   position: relative;
   width: 100%;
+  margin-top: 14px;
 }
 
 .inputbox .inputbox-content label{
@@ -98,6 +136,7 @@
   cursor:text;
   transition: all 200ms ease-out;
   z-index:10;
+  font-weight: 400;
 }
 
 .inputbox .inputbox-content .underline{
@@ -108,7 +147,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--Acento);
+  background: var(--C3);
   transition: all 200ms ease-out;
 }
 
@@ -123,18 +162,18 @@
   border-bottom:1px solid var(--foregroundSecondary);
   outline:none;
   border-radius: 0;
-
+  font-size: large;
 }
 
 #filtro:focus:valid ~ label{
-  color: var(--Acento);
+  color: var(--C3);
   transform: translateY(-20px);
   font-size:0.825em;
   cursor:default;
 }
 
 #filtro:valid ~ label{
-  color: var(--Acento);
+  color: var(--C3);
   transform: translateY(-20px);
   font-size:0.825em;
   cursor:default;
@@ -153,7 +192,7 @@
 ********************************************************/
 
 #divResultados{
-  background-color: var(--backgroundLight);
+  background-color: transparent;
   padding-top: 40px;
   height: 100%;
 }
@@ -212,6 +251,7 @@ tbody tr:hover {
   background-color: var(--backgroundLight);
   cursor: pointer
 }
+
 @media screen and (max-width: 1200px) {
   th {
     font-size: 1.25em;
@@ -320,6 +360,7 @@ tbody tr:hover {
     left: -50%; 
     width: 200%; 
     height: 200%;
+    background-color: var(--backgroundLight);
   }
   
 .bg img {
@@ -332,3 +373,8 @@ tbody tr:hover {
     min-width: 50%;
     min-height: 50%;
 }
+
+/********************************************************
+                    Barra de filtro
+********************************************************/
+

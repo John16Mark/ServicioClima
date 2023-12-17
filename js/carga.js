@@ -6,6 +6,9 @@ var fechaMenor;
 var datosUnicos = [];
 
 $(document).ready(()=>{
+    
+    
+    
     let filasHtml = "";
     
     // Encontrar la fecha menor
@@ -50,35 +53,16 @@ $(document).ready(()=>{
                     }
                 }
                 console.log(datosLocalidad);
-                /*
-                var rowData = {
-                    id: celdas[0].innerText,
-                    nombre: celdas[1].innerText,
-                    apellido: celdas[2].innerText
-                };
-                console.log(rowData);
-                */
 
                 var c1 = document.getElementById("contenido1");
                 var c2 = document.getElementById("contenido2");
                 c1.classList.add("oculto");
-
+                
                 c1.addEventListener("transitionend", function() {
-                    c1.classList.remove("mostrar");
                     c1.classList.add("oculto2");
-                }, { once: true });
-
-                /*
-                var contenido1 = document.getElementById("contenido1");
-                var c2 = document.getElementById("contenido2");
-                contenido1.classList.add("oculto");
-
-                contenido1.addEventListener("transitionend", function() {
-                    contenido1.classList.add("oculto2");
                     c2.classList.remove("oculto");
                     c2.classList.remove("oculto2");
                 }, { once: true });
-                */
             }
             
         });
@@ -259,3 +243,16 @@ function palabraIgual(palabra1, palabra2){
     }
     return false;
 }
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('#back-to-top').fadeIn();
+    } else {
+        $('#back-to-top').fadeOut();
+    }
+});
+$('#back-to-top').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 400);
+    return false;
+});
