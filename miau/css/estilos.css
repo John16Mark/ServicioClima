@@ -1,0 +1,222 @@
+@import url('https://fonts.google.com/specimen/Montserrat/tester?preview.text=Humedad&selected=Material+Symbols+Outlined:humidity_percentage:FILL@0;wght@400;GRAD@0;opsz@24');
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-shadow: #000 0px 0px 10px;
+    font-size: 2vw;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.cardcontainer{
+    padding: 2px 16px;
+}
+
+.gifs{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 20%;
+    margin: 10px;
+    transition: transform 0.3s;
+    box-shadow: #000 0px 0px 10px;
+}
+
+.slides {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    scroll-snap-align: start;
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slides:nth-child(1) {
+    background-image: url(../img/fondo7.jpg);
+  }
+
+.slides:nth-child(2) {
+    background-image: url(../img/fondo2.jpg);
+  }
+
+.slides:nth-child(3) {
+    background-image: url(../img/fondo9.jpg);
+  }
+
+.slides:nth-child(4) {
+    background-image: url(../img/fondo5.jpg);
+  }
+
+.slides:nth-child(5) {
+    background-image: url(../img/fondo8.jpg);
+  }
+
+.slides:nth-child(6) {
+    background-image: url(../img/fondo6.jpg);
+  }
+
+.slides:nth-child(7) {
+    background-image: url(../img/fondo3.jpg);
+  }
+
+.slides:nth-child(8) {
+    background-image: url(../img/fondo6.png);
+  }
+
+h1{
+    font-size: 10vw;
+}
+
+p{
+    text-align: justify;
+}
+
+.column {
+    float: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 49%;
+}
+
+.columncard {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 25%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    width: 90%;
+    height: 100%;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 90%;
+    background-color: white;
+    border-radius: 5px;
+    border: #000 1px solid;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #000;
+    text-shadow: none;
+    height: 450px;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    transform: scale(1.1);
+  }
+
+.texto{
+    display: flexbox;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.imagecard {
+    width: 99.5%;
+    height: 225px;
+    border-radius: 5px 5px 0 0;
+    border: #000 1px solid;
+  }
+
+.logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+}
+
+.icon{
+    width: 4vw;
+    height: 4vw;
+    transition: transform 0.3s;
+    border-radius: 0%;
+    margin: 10px;
+    box-shadow: none;
+}
+
+.icon:hover{
+    transform: scale(1.5);
+}
+
+.btn {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    color: #000;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100px);
+    transition: all 1.2s;
+}
+  
+@media (prefers-reduced-motion) {
+    .hidden {
+      transition: none;
+    }
+}
+  
+.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1.2s;
+}
