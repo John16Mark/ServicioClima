@@ -100,12 +100,12 @@
               <div class="card cont">
                 <div class="card-body">
 
-                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px; margin-top: 30px;">
                     <div class="col">
-                      <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
-                        <img src="icons/rain.png" width="20" height="20">
-                      </div>
-                      <p class="fs-6">Medio nublado</p>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/Despejado.png">
+                        <h6 style="margin-left: 8px;">Cielo despejado</h6>
+                      </div>  
                     </div>
                     <div class="col">
                       <div>
@@ -187,13 +187,17 @@
                             <div class="imagen-container" style="background-position: center center;"></div>
                           </div>
                           <div class="cont-txt">
-                            <ul class="list-group list-group-flush ">
+                            <ul class="list-group list-group-flush tabla-dias">
+                              <li class="list-group-item justify-content-center" style="background: none; text-align: center;">
+                                <span id="dia">Martes</span><br>
+                                <span id="dia">Parcialmente nublado</span>
+                              </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
                                 <span class="tabla-dias">Máxima</span>
                                 <span class="tabla-dias">18°</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span class="tabla-dias" style="font-size: 0.9em; font-weight: 500;">Mínima</span>
+                                <span class="tabla-dias">Mínima</span>
                                 <span class="tabla-dias">18°</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
@@ -213,18 +217,22 @@
                             <div class="imagen-container" style="background-position: center center;"></div>
                           </div>
                           <div class="cont-txt">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span>Máxima</span>
-                                <span>18°</span>
+                            <ul class="list-group list-group-flush tabla-dias">
+                              <li class="list-group-item justify-content-center" style="background: none; text-align: center;">
+                                  <span id="dia">Martes</span><br>
+                                  <span id="dia">Parcialmente nublado</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span>Mínima</span>
-                                <span>18°</span>
+                                <span class="tabla-dias">Máxima</span>
+                                <span class="tabla-dias">18°</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span>Humedad</span>
-                                <span>18°</span>
+                                <span class="tabla-dias">Mínima</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Precipitación</span>
+                                <span class="tabla-dias">18°</span>
                               </li>
                             </ul>
                           </div>
@@ -234,14 +242,29 @@
 
                     <div class="col-md-4">
                       <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
-                        <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="card-body">
                           <div class="cont-img">
                             <div class="imagen-container" style="background-position: center center;"></div>
                           </div>
                           <div class="cont-txt">
-                            <p class="fs-6">Lluvioso</p>
-                            <p class="fs-6">máx 40°/ mín 18°</p>
-                            <p class="fs-6">Humedad: 80%</p>
+                            <ul class="list-group list-group-flush tabla-dias">
+                              <li class="list-group-item justify-content-center" style="background: none; text-align: center;">
+                                <span id="dia">Martes</span><br>
+                                <span id="dia">Parcialmente nublado</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Máxima</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Mínima</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Precipitación</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>

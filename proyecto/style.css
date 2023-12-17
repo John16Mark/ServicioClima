@@ -161,4 +161,10 @@ ul li a:before{
     height: 3px;
 }
 
+/* *********************** Nuevo */
 
+.tabla-dias li span{
+    font-size: 15px;
+    font-weight: 500;
+
+}
