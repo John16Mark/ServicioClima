@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>JavaScript</title>
+
+        <script>
+            const createsnippets=function(e){
+                /* the reference node near where we will generate menu */
+                let headlines=document.getElementById('headlines');
+                /* utiity to add new dom element */
+                const create=function(t,v,p){
+                    let n=document.createElement( t );
+                        n.innerHTML=v;
+                    p.appendChild( n );
+                    return n;
+                };
+                /* create the list */
+                let ul=create( 'ul', null, document.body );
+
+                /* find all articles and add new snippet headline */
+                Array.from( document.querySelectorAll( 'article.newsarticle > h4' ) ).forEach( function( h4 ){
+                    create( 'li', h4.textContent+' ... '+h4.nextElementSibling.innerText, ul );
+                });
+
+                /* refactor HTMl to ensure layout is "just so" */
+                headlines.parentNode.insertBefore( ul, headlines.nextSibling )
+            }
+
+            /* when the DOM is ready, create the list of headline snippets */
+            document.addEventListener( 'DOMContentLoaded', createsnippets );
+        </script>
+
+        <style>
+            ul{ color:red; }
+        </style>
+
+
+    </head>
+    <body>
+        <div id='wrappermain'>
+            <h1>Bizzare News Mash Up</h1>
+            <section id='headlines'>
+                <h2>Bizzare News Summary</h2>
+            </section>
+            <section id='news'>
+                <h3>News Stories in Full</h3>
+                <article class='newsarticle'>
+                    <h4>What a load of Bull!</h4>
+                    <p>Chinese Kung Fu Masters are seeking the ultimate opponents</p>
+                    <p>Several times a week, kung fu teacher Ren Ruzhi enters a ring to spar with a bovine opponent around
+                        five times his weight and capable of killing him.</p>
+                    <p>Ren’s mixing of martial arts and bullfighting worries his mother, but the 24-year-old has never been
+                        hurt. Besides, he says, grappling with a snorting bull is exciting.</p>
+                    <p>It symbolizes the bravery of a man,” Ren told Reuters in Jiaxing in China’s eastern province of
+                        Zhejiang.</P>
+                    <p>Unlike Spain’s more famous sport, the Chinese variant of
+                        bullfighting involves no swords or gore but instead fuses the moves of wrestling with the skill and
+                        speed of kung fu to bring down beasts weighing up to 400 kg (882 lb).</p>
+                    <p>“Spanish bullfighting is more like a performance or a show,” said Hua Yang, a 41-year-old enthusiast
+                        who watched a bullfight during a visit to Spain.</p>
+                </article>
+                <article class='newsarticle'>
+                    <h4>Has Anybody got a Tissue?</h4>
+                    <p>A Hawaiian monk seal got an eel caught in its nose ― and it wasn’t the first time for these
+                        endangered creatures.</p>
+                    <p>The Hawaiian Monk Seal Research Program posted a startling pic of the poor pup on Monday, and the
+                        National Oceanic
+                        and Atmospheric Administration Fisheries provided more details in a post on Wednesday.</p>
+                    <p>The administration said it has seen the same “eels in noses” phenomenon nearly a handful of times in
+                        the last few years.</p>
+                    <p>“We don’t know if this is just some strange statistical anomaly or something we will see more of in
+                        the future,”
+                        the NOAA wrote.</p>
+                    <p>The agency has two theories on why it happened in this case: A cornered eel was trying to defend
+                        itself or escape, and
+                        wound up in the seal’s nose. Or the seal could have swallowed the eel first and regurgitated its
+                        prey out the wrong way.</p>
+                </article>
+                <article class='newsarticle'>
+                    <h4>Dog Pulls Off Spectacular Save During Argentina Soccer Match</h4>
+                    <p>A pooch invaded the pitch during a Federal A league match between Juventud Unida and Defensores de
+                        Belgrano over the weekend.</p>
+                    <p>Juventud Unida were already comfortably ahead against Defensores de Belgrano in their league clash
+                        when the dog
+                        made his unexpected cameo.</p>
+                    <p>Belgrano looked on course to go four goals down when their goalkeeper kicked the ball against a
+                        Juventud player,
+                        who then took a shot towards the empty net.</p>
+                    <p>But in the nick of time, a dog came out of nowhere to race across the line and nod the ball away from
+                        goal.</p>
+                    <p>Unfortunately, the dog was unable to inspire a comeback as Juventud went on to win the match 3-0.</p>
+                </article>
+                <article class='newsarticle'>
+                    <h4>Nobody Beats The Laws of Nature</h4>
+                    <p>A 69-year-old Dutch man has failed in his attempt to legally declare himself 20 years younger.</p>
+                    <p>Last month, motivational speaker Emile Ratelband filed a lawsuit against the Dutch government
+                        requesting that his
+                        date of birth be switched from March 11, 1949, to March 11, 1969.</p>
+                    <p>n Monday, a court in the Netherlands city of Arnhem rejected his age-changing application, saying
+                        that while Ratelband
+                        “is at liberty to feel 20 years younger than his real age and to act accordingly,” actually changing
+                        the birth certificate
+                        is not possible.</p>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>
