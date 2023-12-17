@@ -12,7 +12,7 @@
 
 
 
-h1, h2, h3, span{
+h1, h2, h3, h5, span{
     z-index: 1;
 }
 
@@ -112,6 +112,10 @@ html, body{
     border-color: black;
 }
 
+.cont-txt{
+    margin-top: 30px;
+}
+
 
 .row{
     width: 100%;
@@ -126,7 +130,7 @@ html, body{
 }
 
 .card.hoverable:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .imagen-container{
