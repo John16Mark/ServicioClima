@@ -9,23 +9,24 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html, body{
-    height: 100%;
-    margin: 0;
-}
+
+
 
 h1, h2, h3, span{
     z-index: 1;
 }
 
-
-.main_container{
+html, body{
     height: 100%;
-    background-image: url("images/back.jpg");
-    background-attachment: fixed;
+    margin: 0;
+    background-image: url("images/desierto.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.main_container{
+    
     color: #fff;
     position: relative;
     transition: 500ms;
@@ -41,7 +42,7 @@ h1, h2, h3, span{
 .informacion_general{
     margin-top: 30px;
     margin-bottom: 30px;
-    background-image: url("images/atardecer.png");
+    background-image: url("images/prueba.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -94,6 +95,24 @@ h1, h2, h3, span{
     color: #fff;
 }
 
+.cont-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    display: block;
+    left: 50%;
+    transform: translatex(-50%);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    border: 2px;
+    border-color: black;
+}
+
+
 .row{
     width: 100%;
     margin-right: 30px;
@@ -101,6 +120,9 @@ h1, h2, h3, span{
 
 .card.hoverable{
     transition: all 0.3s;
+    border-radius: 15px;
+    backdrop-filter: blur(2rem);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .card.hoverable:hover{
@@ -112,7 +134,7 @@ h1, h2, h3, span{
     background-size: contain;
     background-repeat: no-repeat;
     width: auto;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,5 +145,18 @@ h1, h2, h3, span{
     background-image: url("icons/parcialmente-nublado-lluvia.gif");
 }
 
+ul li a{
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+ul li a:before{
+    content: '';
+    position: absolute;
+    background: #000;
+    width: auto;
+    height: 3px;
+}
 
 

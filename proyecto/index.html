@@ -13,40 +13,51 @@
     </style>
 </head>
 <body>
-    <div class="main_container">
-      
-      <!-- ************************** Barra de navegación ********************* -->
-      <nav class="navbar navbar-expand-lg" style="background-color: rgb(10, 10, 10)">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">
-            <!-- Cambiar el ícono -->
-            <img src="icons/Despejado.png" width="30" height="30">
-            Clima
-          </a>
-          <button class="navbar-toggler shadow-none border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" style="background-color: rgb(10, 10, 10)" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body" style="background-color: rgb(10, 10, 10)">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Link</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!--Termina barra de navegación-->
+    
+  <header class="navbar sticky-top navbar-expand-lg nav-dark bg-transparent">
+    <nav class="container bd-gutter flex-wrap flex-lg-nowwrap">
+
         
-    <div class="container">
+        <a class="navbar-brand text-white" href="#">
+          <img src="icons/Despejado.png" width="30" height="30">
+          Clima
+        </a>
+
+        <button class="navbar-toggler shadow-none border-0 color-white"
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvasNavbar" 
+                aria-controls="offcanvasNavbar" 
+                aria-label="Toggle navigation"
+                style="backdrop-filter: blur(2rem); background-color: rgba(255, 255, 255, 0.249);">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body flex-row-reverse">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Regresar</a>
+                </li>
+              </ul>        
+          </div>
+        </div>  
+
+    </nav>
+  </header>
+        
+        
+    <div class="container container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+   
       <div class="card informacion_general" style="border: 0px; border-radius: 30px;">
         <div class="card-body">
 
@@ -91,7 +102,7 @@
                     </div>
                     <div class="col">
                       <div>
-                        <img src="images/lluviagente.png" width="auto" height="120px" style="position: absolute; z-index: 2; top: -1em; right: 0.9em;">
+                        <img src="images/lluviagente.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
                       </div>
                     </div>
                   </div>
@@ -153,38 +164,54 @@
             <div class="col-md-8 col-sm-4" >
               <div class="card cont">
                 <div class="card-body">
+                  <!--
+                  <div class="row" style="width: auto; text-align: center;">
+                    <h3 style="font-weight: 300; font-size: 1.5em;">Próximos días</h3>
+                  </div>  
+                  -->
+                  
 
                   <div class="row" style="width: auto;">
+
                     <div class="col-md-4">
                       <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
                         <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                          <div class="cont-img">
                             <div class="imagen-container" style="background-position: center center;"></div>
+                          </div>
+                            
+
                             <p class="fs-6">Lluvioso</p>
                             <p class="fs-6">máx 40°/ mín 18°</p>
                             <p class="fs-6">Humedad: 80%</p>
                         </div>
                       </div>
                     </div>
+
                     <div class="col-md-4">
                       <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
                         <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
-                          <div class="imagen-container" style="background-position: center center;"></div>
+                          <div class="cont-img">
+                            <div class="imagen-container" style="background-position: center center;"></div>
+                          </div>
                           <p class="fs-6">Despejado</p>
                           <p class="fs-6">40°/18°</p>
                         </div>
                       </div>
                     </div>
+
                     <div class="col-md-4">
                       <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
                         <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
-                          <div class="imagen">
-                            <img src="icons/parcialmente-nublado-lluvia.png" width="50px" height="50px">
+                          <div class="cont-img">
+                            <div class="imagen-container" style="background-position: center center;"></div>
                           </div>
                             <p class="fs-6">Despejado</p>
                             <p class="fs-6">40°/18°</p>
                         </div>
                       </div>
                     </div>
+
                   </div>
 
                 </div>
@@ -194,13 +221,129 @@
           </div>
         </div>
       </div>
-      
-        <!--Cambiar esta wea hoorible que no me gusta alv-->
+
+        <!--Cambiar esta wea hoorible que no me gusta alv
         <div class="row" style="margin-left: 20px; margin-right: 20px; width:auto; justify-content: center;">
 
-        </div> <!--Final row-->
+          <div class="col-md-4 col-sm-4" >
+            <div class="card" style="border-radius: 20px 50px 20px 20px;">
+              <div class="card-body">
+
+                <div class="row" style="width: auto; justify-content: center;">
+                  <div class="col" style="width: 50%;">
+                      <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 15px;">
+                        <div class="img">
+                          <img class="cont1-img" src="icons/rain.png">
+                        </div>
+                        <div class="texto">
+                          <span>Medio nublado</span>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                  
+                <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                  <div class="col">
+                    <div class="texto" style="margin-top: 10px;">
+                      <span>Máxima</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/maxima.png">
+                      <h3 style="margin-left: 8px;">40</h3>
+                      <h3 style="margin-left: 1px;">°</h3>
+                    </div>  
+                  </div>
+                  <div class="col" style="margin-top: 10px;">
+                    <div class="texto">
+                      <span>Mínima</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/minima.png">
+                      <h3 style="margin-left: 8px;">10</h3>
+                      <h3 style="margin-left: 1px;">°</h3>
+                    </div>  
+                  </div>
+                </div>
+
+                <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                  <div class="col">
+                    <div class="texto" style="margin-top: 10px;">
+                      <span>Humedad</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/humedad.png">
+                      <h3 style="margin-left: 8px;">80</h3>
+                      <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
+                    </div>  
+                  </div>
+                  <div class="col" style="margin-top: 10px;">
+                    <div class="texto">
+                      <span>Viento</span>
+                    </div>
+                    <div class="cuadros-info">
+                      <img class="cont1-img" src="icons/viento.png">
+                      <h3 style="margin-left: 8px;">10</h3>
+                      <h3 style="margin-left: 1px; font-size: 13px;">km/h</h3>
+                    </div>  
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-sm-4" >
+            <div class="card">
+              <div class="card-body">
+                <div class="row" style="width: auto;">
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                          <div class="imagen-container" style="background-position: center center;"></div>
+                          <p class="fs-6">Lluvioso</p>
+                          <p class="fs-6">máx 40°/ mín 18°</p>
+                          <p class="fs-6">Humedad: 80%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="imagen-container" style="background-position: center center;"></div>
+                        <p class="fs-6">Despejado</p>
+                        <p class="fs-6">40°/18°</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="imagen">
+                          <img src="icons/parcialmente-nublado-lluvia.png" width="50px" height="50px">
+                        </div>
+                          <p class="fs-6">Despejado</p>
+                          <p class="fs-6">40°/18°</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
+                      <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                        <div class="imagen">
+                          <img src="icons/parcialmente-nublado-lluvia.png" width="50px" height="50px">
+                        </div>
+                          <p class="fs-6">Despejado</p>
+                          <p class="fs-6">40°/18°</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> Final row-->
       </div>
-    </div>
 
 </body>
 </html>
