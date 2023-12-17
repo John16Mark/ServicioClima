@@ -58,173 +58,209 @@
     </div>
     
     <div id="contenido2" class="cc contenido oculto">
+
       <div class="container container-xxl bd-gutter mt-3 my-md-4 bd-layout">
    
-        <div class="card informacion_general" style="border: 0px; border-radius: 30px;">
-          <div class="card-body">
-  
-            <!--**Primera sección con información general-->
-  
-                <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 60px; display: flex;">
-  
-                  <div class="col-md-3 clima" style="justify-content: center;">
-                    <div class="clima-img" style="z-index: 1;">
-                      <img src="icons/Despejado.png"  style="width: fit-content; height: max-content; justify-content: center; align-items: center;">
-                    </div>
-                    <h1 style="color: #fff; font-size: 6em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">22°</h1>
-                  </div>
-    
-                  <div class="col-md-7 align-self-center estado-municipio" style="align-items: center;">
-                    <div class="row">
-                      <h2 id="txtMunicipio" style=" color: #fff; font-size: 3em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Cadereyta de Montes</h2>
-                    </div>
-                    <div class="row">
-                      <h3 id="txtEstado" style="color: #fff; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Querétaro</h3>
-                    </div>
-                  </div>
-    
-                </div>
-  
-            
-  
-            <!--**Segunda sección con información tanto del clima como de los sig 3 dias-->
-            <div class="row texto" style="width: auto; justify-content: center;">
-  
-              <!--PRIMERA SECCION-->
-              <div class="col-md-4 col-sm-4" style="margin-bottom: 30px;">
-                <div class="card cont">
-                  <div class="card-body">
-  
-                    <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
-                      <div class="col">
-                        <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
-                          <img src="icons/info/rain.png" width="20" height="20">
-                        </div>
-                        <p class="fs-6">Medio nublado</p>
-                      </div>
-                      <div class="col">
-                        <div>
-                          <img src="img/lluviagente.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
-                        </div>
-                      </div>
-                    </div>
-  
-                    <!--Temperatura máxima y mínima-->
-                    <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
-                      <div class="col">
-                        <div class="texto" style="margin-top: 10px;">
-                          <span>Máxima</span>
-                        </div>
-                        <div class="cuadros-info">
-                          <img class="cont1-img" src="icons/info/maxima.png">
-                          <h3 id="dia1max" style="margin-left: 8px;">40</h3>
-                          <h3 style="margin-left: 1px;">°</h3>
-                        </div>  
-                      </div>
-                      <div class="col" style="margin-top: 10px;">
-                        <div class="texto">
-                          <span>Mínima</span>
-                        </div>
-                        <div class="cuadros-info">
-                          <img class="cont1-img" src="icons/info/minima.png">
-                          <h3 id="dia1min" style="margin-left: 8px;">10</h3>
-                          <h3 style="margin-left: 1px;">°</h3>
-                        </div>  
-                      </div>
-                    </div>
-  
-                    <!--Humedad y Viento-->  
-                    <div class="row " style="width: auto; justify-content: center; align-items: center; text-align: center;">
-                      <div class="col">
-                        <div class="texto" style="margin-top: 10px;">
-                          <span>Humedad</span>
-                        </div>
-                        <div class="cuadros-info">
-                          <img class="cont1-img" src="icons/info/humedad.png">
-                          <h3 id="dia1wet" style="margin-left: 8px;">80</h3>
-                          <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
-                        </div>  
-                      </div>
-                      <div class="col" style="margin-top: 10px;">
-                        <div class="texto">
-                          <span>Viento</span>
-                        </div>
-                        <div class="cuadros-info">
-                          <img class="cont1-img" src="icons/info/viento.png">
-                          <h3 id="dia1wind" style="margin-left: 8px;">10</h3>
-                          <h3 style="margin-left: 1px; font-size: 13px;">km/h</h3>
-                        </div>  
-                      </div>
-                    </div>
-  
-                  </div>
-                </div>
+      <div class="card informacion_general" style="border: 0px; border-radius: 30px;">
+        <div class="card-body">
+
+          <!--**Primera sección con información general-->
+
+          <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 60px; display: flex;">
+
+            <div class="col-md-3 clima" style="justify-content: center;">
+              <div class="clima-img" style="z-index: 1;">
+                <img src="icons/Despejado.png"  style="width: fit-content; height: max-content; justify-content: center; align-items: center;">
               </div>
-              <!--TERMINA PRIMERA SECCION-->
-  
-              <!--SEGUNDA SECCION-->
-              <div class="col-md-8 col-sm-4 texto" >
-                <div class="card cont">
-                  <div class="card-body">
-                    <!--
-                    <div class="row" style="width: auto; text-align: center;">
-                      <h3 style="font-weight: 300; font-size: 1.5em;">Próximos días</h3>
-                    </div>  
-                    -->
-                    
-  
-                    <div class="row texto" style="width: auto;">
-  
-                      <div class="col-md-4">
-                        <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
-                          <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
-                            <div class="cont-img">
-                              <div class="imagen-container" style="background-position: center center;"></div>
-                            </div>
-                              
-  
-                              <p class="fs-6">Lluvioso</p>
-                              <p id="dia2temp" class="fs-6">máx 40°/ mín 18°</p>
-                              <p id="dia2wet" class="fs-6">Humedad: 80%</p>
-                          </div>
-                        </div>
-                      </div>
-  
-                      <div class="col-md-4">
-                        <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
-                          <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
-                            <div class="cont-img">
-                              <div class="imagen-container" style="background-position: center center;"></div>
-                            </div>
-                            <p class="fs-6">Despejado</p>
-                            <p class="fs-6">40°/18°</p>
-                          </div>
-                        </div>
-                      </div>
-  
-                      <div class="col-md-4">
-                        <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 10px;">
-                          <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
-                            <div class="cont-img">
-                              <div class="imagen-container" style="background-position: center center;"></div>
-                            </div>
-                              <p class="fs-6">Despejado</p>
-                              <p class="fs-6">40°/18°</p>
-                          </div>
-                        </div>
-                      </div>
-  
-                    </div>
-  
-                  </div>
-                </div>
-              </div>
-              <!--TERMINA SEGUNDA SECCION-->
+              <h1 style="color: #fff; font-size: 2.7em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">
+                <span id="numero">18</span>° / <span id="numero">9</span>°
+              </h1>
             </div>
+
+            <div class="col-md-7 align-self-center estado-municipio" style="align-items: center;">
+              <div class="row">
+                <h2 style=" color: #fff; font-size: 3em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Cadereyta de Montes</h2>
+              </div>
+              <div class="row">
+                <h3 style="color: #fff; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Querétaro</h3>
+              </div>
+              <div class="row">
+                <h5>
+                  <span style="color: #fff; font-size: 13px;">Martes</span> <span style="color: #fff; font-size: 13px;">Diciembre 22 2023</span>
+                </h5>
+                
+                
+              </div>
+            </div>
+
+          </div>
+
+          <!--**Segunda sección con información tanto del clima como de los sig 3 dias-->
+          <div class="row" style="width: auto; justify-content: center;">
+
+            <!--PRIMERA SECCION-->
+            <div class="col-md-4 col-sm-4" style="margin-bottom: 30px;">
+              <div class="card cont">
+                <div class="card-body">
+
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
+                    <div class="col">
+                      <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
+                        <img src="icons/rain.png" width="20" height="20">
+                      </div>
+                      <p class="fs-6">Medio nublado</p>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <img src="images/lluviagente.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Temperatura máxima y mínima-->
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-top: 20px;">
+                    <div class="col">
+                      <div class="texto" style="margin-top: 10px;">
+                        <span>Máxima</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/maxima.png">
+                        <h3 style="margin-left: 8px;">40</h3>
+                        <h3 style="margin-left: 1px;">°</h3>
+                      </div>  
+                    </div>
+                    <div class="col" style="margin-top: 10px;">
+                      <div class="texto">
+                        <span>Mínima</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/minima.png">
+                        <h3 style="margin-left: 8px;">10</h3>
+                        <h3 style="margin-left: 1px;">°</h3>
+                      </div>  
+                    </div>
+                  </div>
+
+                  <!--Humedad y Viento-->  
+                  <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center;">
+                    <div class="col">
+                      <div class="texto" style="margin-top: 10px;">
+                        <span>Precipitación</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/humedad.png">
+                        <h3 style="margin-left: 8px;">80</h3>
+                        <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
+                      </div>  
+                    </div>
+                    <div class="col" style="margin-top: 10px;">
+                      <div class="texto">
+                        <span>Viento</span>
+                      </div>
+                      <div class="cuadros-info">
+                        <img class="cont1-img" src="icons/viento.png">
+                        <h3 style="margin-left: 8px;">10</h3>
+                        <h3 style="margin-left: 1px; font-size: 13px;">km/h</h3>
+                      </div>  
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!--TERMINA PRIMERA SECCION-->
+
+            <!--SEGUNDA SECCION-->
+            <div class="col-md-8 col-sm-4" >
+              <div class="card cont">
+                <div class="card-body">
+                  <!--
+                  <div class="row" style="width: auto; text-align: center;">
+                    <h3 style="font-weight: 300; font-size: 1.5em;">Próximos días</h3>
+                  </div>  
+                  -->
+                  
+
+                  <div class="row" style="width: auto;">
+
+                    <div class="col-md-4">
+                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
+                        <div class="card-body">
+                          <div class="cont-img">
+                            <div class="imagen-container" style="background-position: center center;"></div>
+                          </div>
+                          <div class="cont-txt">
+                            <ul class="list-group list-group-flush ">
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Máxima</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias" style="font-size: 0.9em; font-weight: 500;">Mínima</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Precipitación</span>
+                                <span class="tabla-dias">18°</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
+                        <div class="card-body">
+                          <div class="cont-img">
+                            <div class="imagen-container" style="background-position: center center;"></div>
+                          </div>
+                          <div class="cont-txt">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span>Máxima</span>
+                                <span>18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span>Mínima</span>
+                                <span>18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span>Humedad</span>
+                                <span>18°</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
+                        <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                          <div class="cont-img">
+                            <div class="imagen-container" style="background-position: center center;"></div>
+                          </div>
+                          <div class="cont-txt">
+                            <p class="fs-6">Lluvioso</p>
+                            <p class="fs-6">máx 40°/ mín 18°</p>
+                            <p class="fs-6">Humedad: 80%</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!--TERMINA SEGUNDA SECCION-->
           </div>
         </div>
-  
       </div>
+
+    </div>
     </div>
       
     <div class = "bg">

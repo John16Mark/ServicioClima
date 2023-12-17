@@ -20,18 +20,30 @@
 *{
   margin: 0px;
   padding: 0px;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  display: none;
+  font-family: 'Afacad', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
-header {
-  display: block;
+h1, h2, h3, h5, span{
+  z-index: 1;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  background-image: url("images/desierto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main_container{
+  
+  color: #fff;
+  position: relative;
+  transition: 500ms;
+  opacity: 1;
 }
 
 /********************************************************
@@ -407,16 +419,6 @@ cambio drástico en la presentación de la tabla
                     SEGUNDO CONTENIDO
 ********************************************************/
 
-h1, h2, h3, span{
-  z-index: 1;
-}
-
-.texto {
-  font-family: 'Afacad', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-}
-
-
 /* ----------- Empieza contenido ------------------------- */
 
 
@@ -494,10 +496,13 @@ h1, h2, h3, span{
   border-color: black;
 }
 
+.cont-txt{
+  margin-top: 30px;
+}
+
 
 .row{
   width: 100%;
-  margin-right: 30px;
 }
 
 .card.hoverable{
@@ -508,7 +513,7 @@ h1, h2, h3, span{
 }
 
 .card.hoverable:hover{
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .imagen-container{
@@ -540,4 +545,5 @@ ul li a:before{
   width: auto;
   height: 3px;
 }
+
 
