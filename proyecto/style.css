@@ -9,12 +9,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
 h1, h2, h3, span{
     z-index: 1;
 }
 
 
 .main_container{
+    height: 100%;
     background-image: url("images/back.jpg");
     background-attachment: fixed;
     background-position: center;

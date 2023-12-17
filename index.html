@@ -8,7 +8,7 @@
   <link href="./css/general.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/visibilidad.css" rel="stylesheet">
-  <link href="./libs/materialize/css/materialize.min.css" rel="stylesheet">
+  <!--<link href="./libs/materialize/css/materialize.min.css" rel="stylesheet">-->
   <script src="./libs/jquery-3.7.1.min.js"></script>
   <script src="./libs/jquery.filtertable.min.js"></script>
 
@@ -19,22 +19,44 @@
 <body>
   <main>
     <div id="contenido1" class="container contenido mostrar">
-      <input type="text" id="filtro">
-      <div class="divTabla">
-        <table id="tablaClima" class="centered highlight responsive-table">
-          <thead>
-            <tr><th>Estado</th><th>Municipio</th><th>Descripción</th><th>Foto</th></tr>
-          </thead>
-          <tbody id="filasTabla">
       
-          </tbody>
-        </table>
+      <div id="divTitulo">
+        <div id="divTituloTexto">
+          Vista general por municipios
+        </div>
+        <div id="divFiltro">
+          <dl class="inputbox">
+            <dt class="inputbox-title">Filtrar por estado/municipio</dt>
+            <dd class="inputbox-content">
+              <input id="filtro" type="text" required/>
+              <label for="filtro">Buscar</label>
+              <span class="underline"></span>
+            </dd>
+          </dl>
+        </div>
       </div>
+      
+      
+
+      <div id="divResultados">
+        <div class="divTabla">
+          <table id="tablaClima" class="centered highlight responsive-table">
+            <thead>
+              <tr><th id="col1">Estado</th><th id="col2">Municipio</th><th id="colMin">Temp. Mín.</th><th id="colMin">Temp. Máx.</th><th>Descripción</th><th id="colHum">Humedad</th><th id="colImg">Foto</th></tr>
+            </thead>
+            <tbody id="filasTabla">
+        
+            </tbody>
+          </table>
+        </div>
+      </div>        
+      
     </div>
 
-    <div class = "bg">
-      <img src = "img/morning.jpg" alt="mañana">
-    </div>
+    
+      <div class = "bg">
+        <img src = "img/morning.jpg" alt="mañana">
+      </div>
     
   </main>
 </body>

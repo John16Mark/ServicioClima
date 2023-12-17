@@ -1,19 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap');
+
+:root {
+  --backgroundDark: rgb(114, 128, 189);
+  --backgroundMid: rgb(173, 191, 253);
+  --backgroundMidLight: rgb(190, 204, 252);
+  --backgroundLight: rgb(229, 234, 255);
+  --backgroundTable: rgb(248, 248, 248);
+  --foregroundPrimary: rgb(10, 100, 151);
+  --foregroundSecondary: rgb(245, 244, 244);
+  --Acento: rgb(67, 154, 226); 
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
 .container{
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
+}
+
+#contenido1 {
+  width: 100%;
+}
+
+#divTitulo{
+  background-color: var(--backgroundDark);
+}
+
+#divTituloTexto{
+  width: 50%;
+  line-height: 1.1; 
+  padding-top: 50px;
+  margin-left: 6%;
+  padding-left: 40px;
+  text-align: left;
+  font-family: 'afacad', sans-serif;
+  font-size: 6em;
+  text-shadow: 2px 2px rgba(255,255,255,0.8);
+}
+
+@media screen and (max-width: 1000px) {
+  #divTituloTexto{
+    width: 100%;
+    margin-left: 0%;
+    padding-left: 10px;
+    font-size: 4em;
+  }
+}
+
+/********************************************************
+                    Barra de filtro
+********************************************************/
+
+#divFiltro{
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 6%;
+
+  padding-left: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
+
+  font-family: 'montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.inputbox{
+  overflow: hidden;
+  position: relative;
+  padding:15px 0 28px 200px;
+}
+
+.inputbox .inputbox-title{
+  position: absolute;
+  top:15px;
+  left: 0;
+  width: 200px;
+  height: 30px;
+  color: #666;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.inputbox .inputbox-content{
+  position: relative;
+  width: 100%;
+}
+
+.inputbox .inputbox-content label{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 30px;
+  line-height: 30px;
+  color:var(--foregroundSecondary);
+  cursor:text;
+  transition: all 200ms ease-out;
+  z-index:10;
+}
+
+.inputbox .inputbox-content .underline{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom:-1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--Acento);
+  transition: all 200ms ease-out;
+}
+
+#filtro{
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size:14px;
+  border:0;
+  background: none;
+  border-bottom:1px solid var(--foregroundSecondary);
+  outline:none;
+  border-radius: 0;
+
+}
+
+#filtro:focus:valid ~ label{
+  color: var(--Acento);
+  transform: translateY(-20px);
+  font-size:0.825em;
+  cursor:default;
+}
+
+#filtro:valid ~ label{
+  color: var(--Acento);
+  transform: translateY(-20px);
+  font-size:0.825em;
+  cursor:default;
+}
+
+#filtro:focus ~ .underline{
+  width: 100%;
+}
+
+#filtro:valid ~ .underline{
+  width: 100%;
+}
+
+/********************************************************
+                            Tabla
+********************************************************/
+
+#divResultados{
+  background-color: var(--backgroundLight);
+  padding-top: 40px;
+  height: 100%;
 }
 
 .divTabla{
-    width: 75%;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid transparent;
-    backdrop-filter: blur(2rem);
-    background-color: rgba(255, 255, 255, 0.249);
-    
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  backdrop-filter: blur(2rem);
+  background-color: var(--backgroundTable); 
+  
 }
 
+#tablaClima{
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  table-layout: fixed;
+}
+
+tr {
+  height: 20px;
+}
+
+th{
+  background-color: var(--backgroundMidLight);
+  font-family: 'afacad', sans-serif;
+  font-size: 1.4em;
+}
+
+#col1 {
+  width: 20%;
+}
+#col2 {
+  width: 20%;
+}
+#colMin {
+  width: 10%;
+}
+#colHum {
+  width: 10%;
+}
+#colImg {
+  width: 8%;
+}
+
+#fila{
+  font-family: 'montserrat', sans-serif;
+  height: 68px;
+}
+
+tbody tr:hover {
+  color: var(--Acento);
+  background-color: var(--backgroundLight);
+  cursor: pointer
+}
+@media screen and (max-width: 1200px) {
+  th {
+    font-size: 1.25em;
+  }
+}
+@media screen and (max-width: 1050px) {
+  th {
+    font-size: 1.1em;
+  }
+  #colMin {
+    width: 8%;
+    font-size: .8em;
+  }
+  #colHum {
+    font-size: .75em;
+    content: "Hum.";
+  }
+  table td img {
+    width: 45px;
+  }
+
+
+  #divFiltro{
+    width: 80%;
+  }
+
+  #fila{
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  th {
+    font-size: 1em;
+  }
+  #fila{
+    font-size: .7em;
+  }
+}
+@media screen and (max-width: 650px) {
+  table {
+    border: 1;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+  }
+
+  #fila{
+    font-family: 'montserrat', sans-serif;
+    height: fit-content;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td img {
+    width: 2px;
+  }
+  
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/********************************************************
+                    Imágen de fondo
+********************************************************/
 .bg {
     position: fixed; 
     top: -50%; 
@@ -31,4 +331,4 @@
     margin: auto; 
     min-width: 50%;
     min-height: 50%;
-  }
+}

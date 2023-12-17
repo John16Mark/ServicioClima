@@ -20,9 +20,12 @@ $(document).ready(()=>{
             datosUnicos.push(elemento);
             filasHtml += `
             <tr id='fila'>
-                <td>${elemento.nes}</td>
-                <td>${elemento.nmun}</td>
-                <td>${elemento.desciel}</td>
+                <td scope='row' data-label='Estado'>${elemento.nes}</td>
+                <td scope='row' data-label='Municipio'>${elemento.nmun}</td>
+                <td scope='row' data-label='Temp. Mín.'>${elemento.tmin} °C</td>
+                <td scope='row' data-label='Temp. Máx.'>${elemento.tmax} °C</td>
+                <td scope='row' data-label='Desc. Cielo'>${elemento.desciel}</td>
+                <td scope='row' data-label='Humedad'>${elemento.probprec}%</td>
                 <td><img src='./img/${elemento.desciel}.png' class='cambiaTamImg'></td>
             </tr>
             `;
@@ -57,9 +60,11 @@ $(document).ready(()=>{
                 */
 
                 var c1 = document.getElementById("contenido1");
+                var c2 = document.getElementById("contenido2");
                 c1.classList.add("oculto");
 
                 c1.addEventListener("transitionend", function() {
+                    c1.classList.remove("mostrar");
                     c1.classList.add("oculto2");
                 }, { once: true });
 
