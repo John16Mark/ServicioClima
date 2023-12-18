@@ -70,6 +70,10 @@ html, body{
   clear: both;
   top: 0px;
   background-color: var(--C1);
+  background-image: url("/img/fondoazul1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   box-sizing: initial;
   margin-top: 0px;
 }
@@ -94,6 +98,10 @@ html, body{
     padding-left: 10px;
     font-size: 4em;
   }
+}
+
+#divbutton {
+  padding-bottom: 20px;
 }
 
 /********************************************************
@@ -170,6 +178,7 @@ html, body{
   line-height: 30px;
   font-size:14px;
   border:0;
+  color: white;
   background: none;
   border-bottom:1px solid var(--foregroundSecondary);
   outline:none;
@@ -546,4 +555,26 @@ ul li a:before{
   height: 3px;
 }
 
+@media screen and (max-width: 1400px) {
+  .textoCards {
+    font-size: .8em;
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .textoCards {
+    font-size: .55em;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .textoCards {
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .textoCards {
+    font-size: 1em;
+  }
+}

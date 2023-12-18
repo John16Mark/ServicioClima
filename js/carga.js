@@ -5,6 +5,8 @@ var tabla = document.getElementById("tablaClima");
 var fechaMenor;
 var datosUnicos = [];
 
+
+
 $(document).ready(()=>{
     let filasHtml = "";
     
@@ -62,16 +64,16 @@ $(document).ready(()=>{
                     c1.classList.add("oculto2");
                     c2.classList.remove("oculto");
                     
-                    c2.classList.add("mostrar");
+                    //c2.classList.add("mostrar");
                 }, { once: true });
                 c2.classList.remove("oculto2");
-
+                
                 // Cambia los textos:
                 // Título
                 var tituloImagen = document.getElementById("tituloImagen");
                 tituloImagen.src = regresarIcono(datosLocalidad[0].desciel, datosLocalidad[0].prec)+".png";
                 var caratula = document.getElementById("caratula");
-                caratula.style.backgroundImage = "url('/img/"+datosLocalidad[0].nes+".jpg')";
+                caratula.style.backgroundImage = "url('/img/estados/"+datosLocalidad[0].nes+".jpg')";
                 var txtMun = document.getElementById("txtMunicipio");
                 var txtEs = document.getElementById("txtEstado");
                 var txtMax = document.getElementById("titulomax");
@@ -87,6 +89,8 @@ $(document).ready(()=>{
                 txtFecha.innerText = Mes(fecha1)+" "+fecha1.getDate()+" "+fecha1.getFullYear();
 
                 // Card día 1
+                var imgGente = document.getElementById("lluviagente");
+                imgGente.src = imagenGente(datosLocalidad[0].tmax, datosLocalidad[0].tmin, datosLocalidad[0].prec);
                 var txtNubes = document.getElementById("dia1nubes");
                 txtMax = document.getElementById("dia1max");
                 txtMin = document.getElementById("dia1min");
@@ -95,7 +99,7 @@ $(document).ready(()=>{
                 txtMin.innerText = datosLocalidad[0].tmin;
                 var txtHumedad = document.getElementById("dia1wet");
                 var txtViento = document.getElementById("dia1wind");
-                txtHumedad.innerText = datosLocalidad[0].probprec;
+                txtHumedad.innerText = datosLocalidad[0].prec;
                 txtViento.innerText = datosLocalidad[0].velvien;
 
                 // Card día 2
@@ -441,7 +445,26 @@ function Mes(fecha){
         default:
             return "???";
     }
-    
+}
+
+function imagenGente(tmax, tmin, prec){
+    var cad = "img/cartoon/"
+    if(prec > 12.0){
+        return "climaLluviaFuerte.png"
+    }
+    else if(prec > 2.0) {
+        return cad+"climaLluviaLeve.png";
+    }
+    else {
+        console.log((parseFloat(tmax)+parseFloat(tmin))/2.0)
+        if((parseFloat(tmax)+parseFloat(tmin))/2.0 >= 30){
+            return cad+"climaCalor.png";
+        } else if((parseFloat(tmax)+parseFloat(tmin))/2.0 >= 15){
+            return cad+"climaNormal.png"
+        } else {
+            return cad+"climaFrio.png"
+        }
+    }
 }
 
 /*************************************************************************************************
@@ -461,3 +484,55 @@ $('#back-to-top').click(function () {
     }, 400);
     return false;
 });
+
+/*************************************************************************************************
+ *                                  SCROLL BACK TO TOP
+*************************************************************************************************/
+
+var btnregresar = document.getElementById("btnregresar");
+
+btnregresar.addEventListener("click", function() {
+    var c1 = document.getElementById("contenido1");
+    var c2 = document.getElementById("contenido2");
+    //c2.classList.remove("mostrar")
+    c2.classList.add("oculto");
+    
+    c2.addEventListener("transitionend", function() {
+        c1.classList.remove("oculto2");
+        c1.classList.remove("oculto");
+        c1.classList.add("mostrar");
+        //c1.classList.remove("oculto");
+    }, { once: true });
+
+    c1.addEventListener("transitionend", function() {
+        
+    }, { once: true });
+    c1.classList.remove("mostrar");
+});
+/*
+var c1 = document.getElementById("contenido1");
+                var c2 = document.getElementById("contenido2");
+                c1.classList.add("oculto");
+                c1.classList.remove("mostrar")
+                
+                c1.addEventListener("transitionend", function() {
+                    c1.classList.add("oculto2");
+                    c2.classList.remove("oculto");
+                    
+                    c2.classList.add("mostrar");
+                }, { once: true });
+                c2.classList.remove("oculto2");
+                */
+
+                /*
+                function regresar() {
+                    var contenido2 = document.getElementById("contenido2");
+                    contenido2.classList.add("oculto");
+        
+                    contenido2.addEventListener("transitionend", function() {
+                        contenido2.classList.add("oculto2");
+                        document.getElementById("contenido1").classList.remove("oculto");
+                        document.getElementById("contenido1").classList.remove("oculto2");
+                    }, { once: true });
+                }
+                */

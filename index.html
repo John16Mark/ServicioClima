@@ -24,7 +24,7 @@
   
   <main>
     
-    <div id="contenido1" class="cc contenido mostrar">
+    <div id="contenido1" class="cc contenido">
       
       <div id="divTitulo">
         <div id="divTituloTexto">
@@ -104,15 +104,15 @@
                 <div class="card-body">
 
                   <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
-                    <div class="col">
-                      <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
+                    <div class="col" style="margin-top: 15px; height: 50px; align-items: center;">
+                      <!--<div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
                         <img src="icons/info/rain.png" width="20" height="20">
-                      </div>
-                      <p id="dia1nubes" class="fs-6">Medio nublado</p>
+                      </div>-->
+                      <p id="dia1nubes" class="fs-4" style="font-weight: 500;">Medio nublado</p>
                     </div>
                     <div class="col">
                       <div>
-                        <img src="img/lluviagente.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
+                        <img id="lluviagente" src="img/cartoon/climaNormal.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
                       </div>
                     </div>
                   </div>
@@ -150,7 +150,7 @@
                       <div class="cuadros-info">
                         <img class="cont1-img" src="icons/info/humedad.png">
                         <h3 id="dia1wet" style="margin-left: 8px;">80</h3>
-                        <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
+                        <h3 style="margin-left: 1px; font-size: 15px;">l/m2</h3>
                       </div>  
                     </div>
                     <div class="col" style="margin-top: 10px;">
@@ -181,7 +181,7 @@
                   -->
                   
 
-                  <div class="row" style="width: auto;">
+                  <div class="row textoCards" style="width: auto;">
 
                     <div class="col-md-4">
                       <div id="card2" class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
@@ -283,7 +283,11 @@
         </div>
       </div>
 
-    </div>
+      <div id="divbutton">
+        <button id="btnregresar" class="btn btn-primary" data-mdb-ripple-init type="submit">Regresar</button></div>
+      </div>
+
+      
     </div>
       
     <div class = "bg">

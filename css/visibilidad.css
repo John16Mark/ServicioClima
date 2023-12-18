@@ -5,10 +5,12 @@
 
 .oculto {
     opacity: 0;
+    transition: opacity 0.9s ease-in-out;
 }
 
 .oculto2 {
     display: none;
+    transition: opacity 0.9s ease-in-out;
 }
 
 .mostrar {
