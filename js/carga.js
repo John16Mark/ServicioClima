@@ -496,19 +496,31 @@ btnregresar.addEventListener("click", function() {
     var c2 = document.getElementById("contenido2");
     //c2.classList.remove("mostrar")
     c2.classList.add("oculto");
-    
-    c2.addEventListener("transitionend", function() {
-        c1.classList.remove("oculto2");
-        c1.classList.remove("oculto");
-        c1.classList.add("mostrar");
-        //c1.classList.remove("oculto");
-    }, { once: true });
+    c2.classList.remove("mostrar")
 
-    c1.addEventListener("transitionend", function() {
-        
+    c2.addEventListener("transitionend", function() {
+        c2.classList.add("oculto2");
+        c1.classList.remove("oculto");
+
+    c2.classList.add("oculto2");
     }, { once: true });
-    c1.classList.remove("mostrar");
+    c1.classList.remove("oculto2");
 });
+
+/*
+var c1 = document.getElementById("contenido1");
+var c2 = document.getElementById("contenido2");
+c1.classList.add("oculto");
+c1.classList.remove("mostrar")
+
+c1.addEventListener("transitionend", function() {
+    c1.classList.add("oculto2");
+    c2.classList.remove("oculto");
+    
+    //c2.classList.add("mostrar");
+}, { once: true });
+c2.classList.remove("oculto2");
+*/
 /*
 var c1 = document.getElementById("contenido1");
                 var c2 = document.getElementById("contenido2");
