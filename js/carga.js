@@ -65,24 +65,101 @@ $(document).ready(()=>{
                     c2.classList.add("mostrar");
                 }, { once: true });
                 c2.classList.remove("oculto2");
+
                 // Cambia los textos:
+                // Título
+                var tituloImagen = document.getElementById("tituloImagen");
+                tituloImagen.src = regresarIcono(datosLocalidad[0].desciel, datosLocalidad[0].prec)+".png";
+                var caratula = document.getElementById("caratula");
+                caratula.style.backgroundImage = "url('/img/"+datosLocalidad[0].nes+".jpg')";
                 var txtMun = document.getElementById("txtMunicipio");
                 var txtEs = document.getElementById("txtEstado");
+                var txtMax = document.getElementById("titulomax");
+                var txtMin = document.getElementById("titulomin");
+                var txtDia = document.getElementById("tituloDia");
+                var txtFecha = document.getElementById("tituloFecha");
+                var fecha1 = new Date(fechaFormato(datos[0].dloc));
                 txtMun.innerText = datosLocalidad[0].nmun;
                 txtEs.innerText = datosLocalidad[0].nes;
-                var txtDia1Max = document.getElementById("dia1max");
-                var txtDia1Min = document.getElementById("dia1min");
-                txtDia1Max.innerText = datosLocalidad[0].tmax;
-                txtDia1Min.innerText = datosLocalidad[0].tmin;
-                var txtDia1Humedad = document.getElementById("dia1wet");
-                var txtDia1Viento = document.getElementById("dia1wind");
-                txtDia1Humedad.innerText = datosLocalidad[0].probprec;
-                txtDia1Viento.innerText = datosLocalidad[0].velvien;
+                txtMax.innerText = Math.floor(datosLocalidad[0].tmax);
+                txtMin.innerText = Math.floor(datosLocalidad[0].tmin);
+                txtDia.innerText = Dia(fecha1);
+                txtFecha.innerText = Mes(fecha1)+" "+fecha1.getDate()+" "+fecha1.getFullYear();
 
-                var txtDia2Temp = document.getElementById("dia2temp");
-                var txtDia2Hum = document.getElementById("dia2wet");
-                txtDia2Temp.innerText = "máx "+datosLocalidad[1].tmax+"°/ mín "+datosLocalidad[1].tmin+"°"
-                txtDia2Hum.innerText = "Humedad: "+datosLocalidad[1].probprec+"%"
+                // Card día 1
+                var txtNubes = document.getElementById("dia1nubes");
+                txtMax = document.getElementById("dia1max");
+                txtMin = document.getElementById("dia1min");
+                txtNubes.innerText = datosLocalidad[0].desciel;
+                txtMax.innerText = datosLocalidad[0].tmax;
+                txtMin.innerText = datosLocalidad[0].tmin;
+                var txtHumedad = document.getElementById("dia1wet");
+                var txtViento = document.getElementById("dia1wind");
+                txtHumedad.innerText = datosLocalidad[0].probprec;
+                txtViento.innerText = datosLocalidad[0].velvien;
+
+                // Card día 2
+                var img1 = document.getElementById("imagen2");
+                var card1 = document.getElementById("card2");
+                img1.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[1].desciel, datosLocalidad[1].prec)+".png')";
+                card1.addEventListener("mouseover", function() {
+                    img1.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[1].desciel, datosLocalidad[1].prec)+".gif')";
+                });
+                card1.addEventListener("mouseout", function() {
+                    img1.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[1].desciel, datosLocalidad[1].prec)+".png')";
+                });
+                var txtDia2 = document.getElementById("dia2");
+                txtNubes = document.getElementById("dia2nubes");
+                txtMax = document.getElementById("dia2max");
+                txtMin = document.getElementById("dia2min");
+                txtHumedad = document.getElementById("dia2wet");
+                txtDia2.innerText = Dia(new Date(fechaFormato(datos[1].dloc)));
+                txtNubes.innerText = datosLocalidad[1].desciel;
+                txtMax.innerText = datosLocalidad[1].tmax+"°";
+                txtMin.innerText = datosLocalidad[1].tmin+"°";
+                txtHumedad.innerText = datosLocalidad[1].prec+" l/m2";
+
+                // Card día 3
+                var img2 = document.getElementById("imagen3");
+                var card2 = document.getElementById("card3");
+                img2.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[2].desciel, datosLocalidad[2].prec)+".png')";
+                card2.addEventListener("mouseover", function() {
+                    img2.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[2].desciel, datosLocalidad[2].prec)+".gif')";
+                });
+                card2.addEventListener("mouseout", function() {
+                    img2.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[2].desciel, datosLocalidad[2].prec)+".png')";
+                });
+                var txtDia3 = document.getElementById("dia3");
+                txtNubes = document.getElementById("dia3nubes");
+                txtMax = document.getElementById("dia3max");
+                txtMin = document.getElementById("dia3min");
+                txtHumedad = document.getElementById("dia3wet");
+                txtDia3.innerText = Dia(new Date(fechaFormato(datos[2].dloc)));
+                txtNubes.innerText = datosLocalidad[2].desciel;
+                txtMax.innerText = datosLocalidad[2].tmax+"°";
+                txtMin.innerText = datosLocalidad[2].tmin+"°";
+                txtHumedad.innerText = datosLocalidad[2].prec+" l/m2";
+
+                // Card día 4
+                var img3 = document.getElementById("imagen4");
+                var card3 = document.getElementById("card4");
+                img3.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[3].desciel, datosLocalidad[3].prec)+".png')";
+                card3.addEventListener("mouseover", function() {
+                    img3.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[3].desciel, datosLocalidad[3].prec)+".gif')";
+                });
+                card3.addEventListener("mouseout", function() {
+                    img3.style.backgroundImage = "url('/"+regresarIcono(datosLocalidad[3].desciel, datosLocalidad[3].prec)+".png')";
+                });
+                var txtDia4 = document.getElementById("dia4");
+                txtNubes = document.getElementById("dia4nubes");
+                txtMax = document.getElementById("dia4max");
+                txtMin = document.getElementById("dia4min");
+                txtHumedad = document.getElementById("dia4wet");
+                txtDia4.innerText = Dia(new Date(fechaFormato(datos[3].dloc)));
+                txtNubes.innerText = datosLocalidad[3].desciel;
+                txtMax.innerText = datosLocalidad[3].tmax+"°";
+                txtMin.innerText = datosLocalidad[3].tmin+"°";
+                txtHumedad.innerText = datosLocalidad[3].prec+" l/m2";
             }
             
         });
@@ -312,6 +389,59 @@ function regresarIcono(nubes, humedad){
         }
     }
     return cadena;
+}
+
+function Dia(fecha){
+    switch(fecha.getDay()){
+        case 0:
+            return "Domingo";
+        case 1:
+            return "Lunes";
+        case 2:
+            return "Martes";
+        case 3:
+            return "Miércoles";
+        case 4:
+            return "Jueves";
+        case 5:
+            return "Viernes";
+        case 6:
+            return "Sábado";
+        default:
+            return "???";
+    }
+}
+
+function Mes(fecha){
+    switch(fecha.getMonth()){
+        case 0:
+            return "Enero";
+        case 1:
+            return "Febrero";
+        case 2:
+            return "Marzo";
+        case 3:
+            return "Abril";
+        case 4:
+            return "Mayo";
+        case 5:
+            return "Junio";
+        case 6:
+            return "Julio";
+        case 7:
+            return "Agosto";
+        case 8:
+            return "Septiembre";
+        case 9:
+            return "Octubre";
+        case 10:
+            return "Noviembre";
+        case 11:
+            return "Diciembre";
+        default:
+            return "???";
+    }
+    
 }
 
 /*************************************************************************************************

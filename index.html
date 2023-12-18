@@ -61,32 +61,32 @@
 
       <div class="container container-xxl bd-gutter mt-3 my-md-4 bd-layout">
    
-      <div class="card informacion_general" style="border: 0px; border-radius: 30px;">
+      <div id="caratula" class="card informacion_general" style="border: 0px; border-radius: 30px;">
         <div class="card-body">
 
           <!--**Primera sección con información general-->
 
           <div class="row justify-content-center" style="margin-top: 30px; margin-bottom: 60px; display: flex;">
 
-            <div class="col-md-3 clima" style="justify-content: center;">
+            <div class="col-lg-3 clima" style="justify-content: center;">
               <div class="clima-img" style="z-index: 1;">
-                <img src="icons/Despejado.png"  style="width: fit-content; height: max-content; justify-content: center; align-items: center;">
+                <img id="tituloImagen" src="icons/Despejado.png"  style="width: fit-content; height: max-content; justify-content: center; align-items: center;">
               </div>
               <h1 style="color: #fff; font-size: 2.7em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">
-                <span id="numero">18</span>° / <span id="numero">9</span>°
+                <span id="titulomax">18</span>° / <span id="titulomin">9</span>°
               </h1>
             </div>
 
-            <div class="col-md-7 align-self-center estado-municipio" style="align-items: center;">
+            <div class="col-lg-7 align-self-center estado-municipio" style="align-items: center;">
               <div class="row">
-                <h2 style=" color: #fff; font-size: 3em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Cadereyta de Montes</h2>
+                <h2 id="txtMunicipio" style=" color: #fff; font-size: 3em; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Cadereyta de Montes</h2>
               </div>
               <div class="row">
-                <h3 style="color: #fff; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Querétaro</h3>
+                <h3 id="txtEstado" style="color: #fff; text-shadow: 2px 2px rgba(0, 0, 0, 0.6);">Querétaro</h3>
               </div>
               <div class="row">
                 <h5>
-                  <span style="color: #fff; font-size: 13px;">Martes</span> <span style="color: #fff; font-size: 13px;">Diciembre 22 2023</span>
+                  <span id="tituloDia" style="color: #fff; font-size: 13px;">Martes</span> <span id="tituloFecha" style="color: #fff; font-size: 13px;">Diciembre 22 2023</span>
                 </h5>
                 
                 
@@ -99,20 +99,20 @@
           <div class="row" style="width: auto; justify-content: center;">
 
             <!--PRIMERA SECCION-->
-            <div class="col-md-4 col-sm-4" style="margin-bottom: 30px;">
+            <div class="col-lg-4" style="margin-bottom: 30px;">
               <div class="card cont">
                 <div class="card-body">
 
                   <div class="row" style="width: auto; justify-content: center; align-items: center; text-align: center; margin-bottom: 10px;">
                     <div class="col">
                       <div class = "logo" style="justify-content: center; align-items: center; text-align: center;">
-                        <img src="icons/rain.png" width="20" height="20">
+                        <img src="icons/info/rain.png" width="20" height="20">
                       </div>
-                      <p class="fs-6">Medio nublado</p>
+                      <p id="dia1nubes" class="fs-6">Medio nublado</p>
                     </div>
                     <div class="col">
                       <div>
-                        <img src="images/lluviagente.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
+                        <img src="img/lluviagente.png" width="auto" height="110px" style="position: absolute; z-index: 2; top: -1em; right: 1em; display: block;">
                       </div>
                     </div>
                   </div>
@@ -124,8 +124,8 @@
                         <span>Máxima</span>
                       </div>
                       <div class="cuadros-info">
-                        <img class="cont1-img" src="icons/maxima.png">
-                        <h3 style="margin-left: 8px;">40</h3>
+                        <img class="cont1-img" src="icons/info/maxima.png">
+                        <h3 id="dia1max" style="margin-left: 8px;">40</h3>
                         <h3 style="margin-left: 1px;">°</h3>
                       </div>  
                     </div>
@@ -134,8 +134,8 @@
                         <span>Mínima</span>
                       </div>
                       <div class="cuadros-info">
-                        <img class="cont1-img" src="icons/minima.png">
-                        <h3 style="margin-left: 8px;">10</h3>
+                        <img class="cont1-img" src="icons/info/minima.png">
+                        <h3 id="dia1min" style="margin-left: 8px;">10</h3>
                         <h3 style="margin-left: 1px;">°</h3>
                       </div>  
                     </div>
@@ -148,8 +148,8 @@
                         <span>Precipitación</span>
                       </div>
                       <div class="cuadros-info">
-                        <img class="cont1-img" src="icons/humedad.png">
-                        <h3 style="margin-left: 8px;">80</h3>
+                        <img class="cont1-img" src="icons/info/humedad.png">
+                        <h3 id="dia1wet" style="margin-left: 8px;">80</h3>
                         <h3 style="margin-left: 1px; font-size: 15px;">%</h3>
                       </div>  
                     </div>
@@ -158,8 +158,8 @@
                         <span>Viento</span>
                       </div>
                       <div class="cuadros-info">
-                        <img class="cont1-img" src="icons/viento.png">
-                        <h3 style="margin-left: 8px;">10</h3>
+                        <img class="cont1-img" src="icons/info/viento.png">
+                        <h3 id="dia1wind" style="margin-left: 8px;">10</h3>
                         <h3 style="margin-left: 1px; font-size: 13px;">km/h</h3>
                       </div>  
                     </div>
@@ -171,7 +171,7 @@
             <!--TERMINA PRIMERA SECCION-->
 
             <!--SEGUNDA SECCION-->
-            <div class="col-md-8 col-sm-4" >
+            <div class="col-lg-8" >
               <div class="card cont">
                 <div class="card-body">
                   <!--
@@ -184,24 +184,28 @@
                   <div class="row" style="width: auto;">
 
                     <div class="col-md-4">
-                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
+                      <div id="card2" class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
                         <div class="card-body">
                           <div class="cont-img">
-                            <div class="imagen-container" style="background-position: center center;"></div>
+                            <div id="imagen2" class="imagen-container" style="background-position: center center;"></div>
                           </div>
                           <div class="cont-txt">
-                            <ul class="list-group list-group-flush ">
-                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span class="tabla-dias">Máxima</span>
-                                <span class="tabla-dias">18°</span>
+                            <ul class="list-group list-group-flush tabla-dias">
+                              <li class="list-group-item justify-content-center" style="background: none; text-align: center;">
+                                <span id="dia2">Martes</span><br>
+                                <span id="dia2nubes">Parcialmente nublado</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span class="tabla-dias" style="font-size: 0.9em; font-weight: 500;">Mínima</span>
-                                <span class="tabla-dias">18°</span>
+                                <span class="tabla-dias">Máxima</span>
+                                <span id="dia2max" class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Mínima</span>
+                                <span id="dia2min" class="tabla-dias">18°</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
                                 <span class="tabla-dias">Precipitación</span>
-                                <span class="tabla-dias">18°</span>
+                                <span id="dia2wet" class="tabla-dias">18°</span>
                               </li>
                             </ul>
                           </div>
@@ -210,24 +214,28 @@
                     </div>
 
                     <div class="col-md-4">
-                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
+                      <div id="card3" class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
                         <div class="card-body">
                           <div class="cont-img">
-                            <div class="imagen-container" style="background-position: center center;"></div>
+                            <div id="imagen3" class="imagen-container" style="background-position: center center;"></div>
                           </div>
                           <div class="cont-txt">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span>Máxima</span>
-                                <span>18°</span>
+                            <ul class="list-group list-group-flush tabla-dias">
+                              <li class="list-group-item justify-content-center" style="background: none; text-align: center;">
+                                  <span id="dia3">Martes</span><br>
+                                  <span id="dia3nubes">Parcialmente nublado</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span>Mínima</span>
-                                <span>18°</span>
+                                <span class="tabla-dias">Máxima</span>
+                                <span id="dia3max" class="tabla-dias">18°</span>
                               </li>
                               <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
-                                <span>Humedad</span>
-                                <span>18°</span>
+                                <span class="tabla-dias">Mínima</span>
+                                <span id="dia3min" class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Precipitación</span>
+                                <span id="dia3wet" class="tabla-dias">18°</span>
                               </li>
                             </ul>
                           </div>
@@ -236,15 +244,30 @@
                     </div>
 
                     <div class="col-md-4">
-                      <div class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
-                        <div class="card-body" style="margin-left: auto; margin-right: auto; text-align: center;">
+                      <div id="card4" class="card hoverable" style="width: auto; margin-top: 10px; margin-bottom: 20px;">
+                        <div class="card-body">
                           <div class="cont-img">
-                            <div class="imagen-container" style="background-position: center center;"></div>
+                            <div id="imagen4" class="imagen-container" style="background-position: center center;"></div>
                           </div>
                           <div class="cont-txt">
-                            <p class="fs-6">Lluvioso</p>
-                            <p class="fs-6">máx 40°/ mín 18°</p>
-                            <p class="fs-6">Humedad: 80%</p>
+                            <ul class="list-group list-group-flush tabla-dias">
+                              <li class="list-group-item justify-content-center" style="background: none; text-align: center;">
+                                <span id="dia4">Martes</span><br>
+                                <span id="dia4nubes">Parcialmente nublado</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Máxima</span>
+                                <span id="dia4max" class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Mínima</span>
+                                <span id="dia4min" class="tabla-dias">18°</span>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start" style="background: none;">
+                                <span class="tabla-dias">Precipitación</span>
+                                <span id="dia4wet" class="tabla-dias">18°</span>
+                              </li>
+                            </ul>
                           </div>
                         </div>
                       </div>
