@@ -36,7 +36,7 @@ $(document).ready(()=>{
     }
     $("#filasTabla").html(filasHtml);
 
-    console.log("Número de localidades: ", datosUnicos.length);
+    //console.log("Número de localidades: ", datosUnicos.length);
 
     // Hacer las filas clickables
     var filas = tabla.getElementsByTagName("tr");
@@ -61,7 +61,6 @@ $(document).ready(()=>{
                 c1.classList.remove("mostrar")
                 
                 c1.addEventListener("transitionend", function() {
-                    console.log("hola");
                     c1.classList.add("oculto2");
                     c2.classList.remove("oculto");
                     
@@ -208,9 +207,9 @@ filtro.addEventListener("keyup", function(event) {
     }
     else if((SimilarEstado(filtro.value) || SimilarMunicipio(filtro.value)) && (filtro.value).length !== 1){
         mostrarLocalidades(filtro.value)
-        console.log("Se encuentra localidad");
+        //console.log("Se encuentra localidad");
     } else {
-        console.log("Sin resultados para estado");
+        //console.log("Sin resultados para estado");
     }
     miFuncion(event);
 });
@@ -457,7 +456,7 @@ function imagenGente(tmax, tmin, prec){
         return cad+"climaLluviaLeve.png";
     }
     else {
-        console.log((parseFloat(tmax)+parseFloat(tmin))/2.0)
+        //console.log((parseFloat(tmax)+parseFloat(tmin))/2.0)
         if((parseFloat(tmax)+parseFloat(tmin))/2.0 >= 30){
             return cad+"climaCalor.png";
         } else if((parseFloat(tmax)+parseFloat(tmin))/2.0 >= 15){
