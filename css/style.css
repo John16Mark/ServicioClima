@@ -546,4 +546,26 @@ ul li a:before{
   height: 3px;
 }
 
+@media screen and (max-width: 1400px) {
+  .textoCards {
+    font-size: .8em;
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .textoCards {
+    font-size: .55em;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .textoCards {
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .textoCards {
+    font-size: 1em;
+  }
+}

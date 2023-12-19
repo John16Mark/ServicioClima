@@ -52,7 +52,7 @@ $(document).ready(()=>{
                         datosLocalidad.push(datos[j]);
                     }
                 }
-                console.log(datosLocalidad);
+                //console.log(datosLocalidad);
 
                 // Muestra la información
                 var c1 = document.getElementById("contenido1");
@@ -61,6 +61,7 @@ $(document).ready(()=>{
                 c1.classList.remove("mostrar")
                 
                 c1.addEventListener("transitionend", function() {
+                    console.log("hola");
                     c1.classList.add("oculto2");
                     c2.classList.remove("oculto");
                     
@@ -493,14 +494,14 @@ var btnregresar = document.getElementById("btnregresar");
 btnregresar.addEventListener("click", function() {
     var c1 = document.getElementById("contenido1");
     var c2 = document.getElementById("contenido2");
-    //c2.classList.remove("mostrar")
-    c2.classList.remove("mostrar")
     c2.classList.add("oculto");
-
-    c2.addEventListener("transitionend", function() {
-        c2.classList.add("oculto2");
-        c1.classList.remove("oculto");
-        c2.classList.add("oculto2");
-    }, { once: true });
-    c1.classList.remove("oculto2");
+    c2.classList.remove("mostrar")
+    
+    setTimeout(function() {
+        c1.classList.remove("oculto2");
+        setTimeout(function() {
+            c2.classList.add("oculto2");
+            c1.classList.remove("oculto");
+        }, 10);
+    }, 910);
 });

@@ -5,7 +5,8 @@
 
 .oculto {
     opacity: 0;
-    transition: opacity 0.9s ease-in-out;
+    visibility: hidden;
+    transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
 }
 
 .oculto2 {
@@ -14,7 +15,7 @@
 }
 
 .mostrar {
-    display: initial;
     opacity: 1;
-    transition: opacity 0.9s ease-in-out;
+    visibility: visible;
+    transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
 }
