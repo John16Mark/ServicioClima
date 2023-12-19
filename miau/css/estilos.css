@@ -67,8 +67,8 @@ body {
 }
 
 .gifs{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     border-radius: 20%;
     margin: 10px;
     transition: transform 0.3s;
@@ -123,10 +123,19 @@ body {
   }
 
 h1{
-    font-size: 10vw;
+    font-size: 8vw;
+}
+
+h2{
+    font-size: 3vw;
+}
+
+h3{
+    font-size: 2vw;
 }
 
 p{
+    font-size: 1.5vw;
     text-align: justify;
 }
 
