@@ -4,8 +4,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 
 :root{
-    --primary-color: #0a1118;
-    --primary-color-highlight: #233D54;
+    --primary-color: #0C356A;
+    --primary-color-highlight: #000;
     --bs-body-bg: #FBFbF6;
     --bs-body-font-family: 'Moserrat', sans-serif;
 }
@@ -195,7 +195,70 @@ html{scroll-behavior: smooth;}
     content: '';
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: var(--primary-color);
     opacity: 0.5;
     z-index: 1;
+}
+
+.counter2{
+    background-image: url(images/fondop2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3.125rem;
+    position: relative;
+}
+
+.counter2 h2, .counter2 p{
+    position: relative;
+    z-index: 3;
+    color: white;
+}
+
+.counter2::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.footer{
+    background-color: #000;
+}
+
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.social-icons a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+}
+
+.social-icons a i{
+    font-size: 2em;
+}
+
+.social-icons a:hover{
+    opacity: 0.8;
+}
+
+.footerbottom{
+    color: white;
+    justify-content: center;
+    text-align: center;
 }
