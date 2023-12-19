@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clima principal</title>
+    <link rel="stylesheet" href="pedos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f4b09d69fb.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg sticky-top" style="background-color: black;">
+            <div class="container-fluid sticky-top">
+              <a class="navbar-brand text-white" style="font-weight: 600; font-family: 'Afacad', sans-serif; font-size: 2em;" href="#">climex.</a>
+              <button class="navbar-toggler shadow-none text-white"
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvasNavbar" 
+                aria-controls="offcanvasNavbar" 
+                aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-filter-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M7 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" style="background-color: black;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel"  style="font-weight: 600; font-family: 'Afacad', sans-serif; font-size: 2em;;">climex.</h5>
+                  <button type="button" class="btn-close shadow-none text-white" data-bs-dismiss="offcanvas" aria-label="Close" style="margin-right: 20px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                      </svg>
+                  </button>
+                </div>
+      
+                <div class="offcanvas-body flex-row-reverse">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Explorar</a>
+                      </li>
+                    </ul>        
+                </div>
+              </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section class="principal">
+        <div class="principal-overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"
+        loading="lazy" class="principal-video">
+            <source src="images/fondo.mp4" type="video/mp4">
+        </video>
+
+        <div class="principal-c h-100 container-custom position-relative">
+            <div class="d-flex h-100 align-items-center principal-c-width">
+                <div class="text-white">
+                    <h1 class="principal-h fw-bold mb-4">Sumérgete en el clima:<br>descubre el tiempo de cada rincón con un clic.</h1>
+                    <p class="lead mb-4">Explora el clima de diferentes estados desde la comodidad de tu hogar.</p>
+                    <a href="#" class="mt-2 btn btn-lg btn-outline-light" role="button">Comenzar</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#scroll-down" class="principal-scroll align-items-center">
+            Explorar<br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
+            </svg>
+        </a>
+        
+    </section>
+
+    <a id="scroll-down"></a>
+
+    <!--
+    <section>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="height: 70vh;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8"> 
+                            <h6 style="color: black;">climax.</h6>
+                            <small style="color: black;">La mejor página de clima de todo México</small>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/cloudy.png" class="d-block w-100 h-70" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/despejado.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    -->
+        
+    <section class="about" style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="card" style="border: none;">
+            <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-4 aboutus">
+                    <div class="wclima-img" >
+                        <img src="images/aboutus.jpg" alt="about" class="img-fluid" style="border-radius: 0px; box-shadow: 0 10px 10px 0
+                        rgba(0, 0, 0, 0.6); height: 300px;">
+                    </div>
+                </div>
+                <div class="col-md-8 align-self-center" style="justify-content: flex-end;">
+                    <div class="wclima-txt ">
+                        <span>01</span>
+                        <h1 class="h2 mb-4">Sobre nosotros.</h1>
+                        <p class="mb-4">Bienvenido a Climex, tu compañero meteorológico personalizado.<br>
+                            En Climex, nos apasiona convertir la información meteorológica en una experiencia fascinante y accesible para ti. Somos un equipo de entusiastas del clima y expertos en tecnología, unidos por el deseo de brindarte una visión clara y precisa de lo que el tiempo tiene reservado para ti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="mision" style="margin-bottom: 70px;">
+        <div class="container">
+        </div>
+        <div class="counter mt-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-6 mb-lg-0 mb-md-0 mb-5">
+                        <span>02</span>
+                        <h2>Nuestra misión.</h2>
+                        <p>Facilitamos la exploración del clima en cada rincón de México, proporcionando pronósticos detallados y datos meteorológicos confiables. Creemos que comprender el clima debería ser sencillo y emocionante, y trabajamos incansablemente para lograrlo.</p>
+                    </div>
+                    <div class="col-md-6 mb-lg-0 mb-md-0 mb-5">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section style="margin-top: 30px; margin-bottom: 40px;">
+        <div class="container">
+            <div class="row align-items-center justify-content-center" style="width: auto;">
+                <div class="noticias" style="justify-content: center; text-align: center;">
+                    <h1 class="h2 mb-4">Últimas noticias climáticas.</h1>
+                    <p class="mb-4">
+                        ¡Descubre las historias detrás de las nubes!
+                        <br>Mantente conectado con Climex y sé parte de la conversación sobre el clima.
+
+                    </p>
+                </div>
+                
+                <div class="col d-flex justify-content-center" style="margin-top: 30px; margin-bottom: 30px;">
+                    <div class="card news" style="width: 20rem;">
+                        <img src="images/back.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center; font-size: 15px; justify-content: center;">
+                                <a href="https://www.milenio.com/estados/clima-en-mexico-hoy-17-de-diciembre-se-espera-calor-intenso">
+                                    ¡Adiós al frío en México! Prevén temperaturas de hasta 40°C en estos estados; AQUÍ el clima de hoy
+                                </a>
+                            </h5>
+                            <small>
+                                Ciudad de México / 17.12.2023 08:19:00
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center" style="margin-top: 30px; margin-bottom: 30px;">
+                    <div class="card news" style="width: 20rem;">
+                        <img src="images/back.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center; font-size: 15px; justify-content: center;">
+                                <a href="https://www.milenio.com/estados/clima-en-mexico-hoy-17-de-diciembre-se-espera-calor-intenso">
+                                    ¡Adiós al frío en México! Prevén temperaturas de hasta 40°C en estos estados; AQUÍ el clima de hoy
+                                </a>
+                            </h5>
+                            <small>
+                                Ciudad de México / 17.12.2023 08:19:00
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center" style="margin-top: 30px; margin-bottom: 30px;">
+                    <div class="card news" style="width: 20rem;">
+                        <img src="images/back.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center; font-size: 15px; justify-content: center;">
+                                <a href="https://www.milenio.com/estados/clima-en-mexico-hoy-17-de-diciembre-se-espera-calor-intenso">
+                                    ¡Adiós al frío en México! Prevén temperaturas de hasta 40°C en estos estados; AQUÍ el clima de hoy
+                                </a>
+                            </h5>
+                            <small>
+                                Ciudad de México / 17.12.2023 08:19:00
+                            </small>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      Accordion Item #1
+                                    </button>
+                                  </h2>
+                                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                      <strong>This is the first item's accordion body.</strong>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+   
+    <section>
+        <div class="teoria">
+            <div class="container">
+                <div class="row pt-md-5 pt-2">
+                    <div class="col-lg-5 col-md-5 mb-lg-0 mb-5 text-sec">
+                        <h1>El Arte de Pronosticar el Tiempo</h1>
+                        <p>Bienvenido a la esencia del pronóstico del tiempo, donde la ciencia y la predicción se entrelazan para ofrecerte un vistazo al futuro atmosférico. En Climex, entendemos la importancia de proporcionar pronósticos precisos y relevantes, y detrás de cada predicción hay un proceso meticuloso.</p>
+                        <div class="teoria-img">
+                            <img src="images/teoria.jpg" class="img-fluid" >
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 mt-lg-5 mb-lg-0 mb-5">
+                        <div class="row d-flex align-items-center">
+                            <div class="card col-md-6 border-0 mb-3">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-heart-pulse"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Meteorología en Acción</h4>
+                                        <p>En el corazón del pronóstico del tiempo se encuentra la meteorología, una disciplina científica que explora y comprende los fenómenos atmosféricos. Meteorólogos, expertos apasionados por el clima, interpretan datos complejos, desde patrones de viento hasta temperaturas superficiales del mar, para anticipar cómo evolucionará la atmósfera.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-md-6 border-0 mb-3">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-heart-pulse"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Modelos numéricos y tecnología de vanguardia</h4>
+                                        <p>Los meteorólogos utilizan modelos numéricos, algoritmos y potentes supercomputadoras para simular el comportamiento atmosférico futuro. Estos modelos toman en cuenta una multitud de variables y condiciones, desde la radiación solar hasta la presión atmosférica, para prever cambios climáticos con una precisión cada vez mayor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-md-6 border-0 mb-3">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-heart-pulse"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Monitoreo Continuo</h4>
+                                        <p>El pronóstico del tiempo no es un evento único, sino un proceso continuo. Las estaciones meteorológicas, satélites y sistemas de observación terrestre monitorean constantemente las condiciones climáticas en tiempo real. Este flujo constante de datos se integra en los modelos, permitiendo ajustes y actualizaciones para reflejar con precisión las condiciones cambiantes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-md-6 border-0 mb-3">
+                                <div>
+                                    <div class="icon">
+                                        <i class="bi bi-heart-pulse"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Comunicando el Futuro Atmosférico</h4>
+                                        <p>Nuestro equipo de meteorólogos no solo se dedica a interpretar datos, sino también a traducir esa información compleja en pronósticos claros y accesibles. Queremos que cada usuario comprenda el tiempo que les espera y pueda planificar en consecuencia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
